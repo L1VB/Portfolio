@@ -25,11 +25,15 @@ body{
     --h-weight-bl: 900;
     --f-s-title: 3rem;
     --f-s-regular: 1rem;
+    --f-s-medium: 1.5rem;
 }
 
 /* text */
 .italic{
     font-style: italic;
+}
+.link{
+    color: var(--blue) !important;
 }
 h1, h2, h3, h4, h5, h6, p{
     margin: 0;
@@ -55,6 +59,14 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .reg{
     color: var(--white);
+    letter-spacing: var(--l-space);
+    font-weight: var(--h-weight-r);
+    margin: 0;
+    flex-shrink: 0;
+    font-size: var(--f-s-regular);
+}
+.bodyText{
+    color: var(--purple);
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
     margin: 0;
@@ -125,11 +137,23 @@ nav .container .icon img{
     height: 100%;
 }
 
+/* sphere */
+.sphere{
+    height: 33vh;
+}
+.model{
+    z-index: 99;
+}
+
 /* main */
+main{
+    position: relative;
+}
 main .container{
     width: 100vw;
     margin: 0;
-    min-height: calc(100vh - 59px);
+    position: relative;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
