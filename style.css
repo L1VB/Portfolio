@@ -11,12 +11,14 @@ body{
     width: 100vw;
 }
 
+/* root */
 :root{
     --purple: #433161;
     --white: #E8E0DE;
     --pink: #B90469;
     --blue: #4E8BF5;
     --light-purple: #73316F;
+
     --font: "Sansita", sans-serif;
     --l-space: 3%;
     --h-weight-r: 400;
@@ -26,6 +28,20 @@ body{
     --f-s-title: 3rem;
     --f-s-regular: 1rem;
     --f-s-medium: 1.5rem;
+
+    --main-h: 60vh;
+    --main-sect-hero-pad: 0 20px 13vh;
+}
+
+@media (min-width: 480px) {
+    :root {
+        --main-h: 62vh;
+    }
+}
+@media (min-width: 998px) {
+    :root {
+        --main-h: 64vh;
+    }
 }
 
 /* text */
@@ -103,11 +119,12 @@ nav{
     position: fixed;
     width: 100%;
     bottom: 2rem;
-    z-index: 1;
+    z-index: 100;
     padding: 0 1rem;
 }
 nav .container{
-    min-width: 65vw;
+    width: 65vw;
+    max-width: 700px;
     min-height: fit-content;
     height: auto;
     padding: .75em 1em;
@@ -140,6 +157,7 @@ nav .container .icon img{
 /* main */
 main{
     position: relative;
+    z-index: 1;
 }
 main .container{
     width: 100vw;
@@ -152,10 +170,10 @@ main .container{
 }
 main .container section.hero{
     margin: 0;
-    max-width: fit-content;
-    height: 60vh;
+    min-width: fit-content;
+    height: var(--main-h);
     background-color: var(--purple);
-    padding: 0 20px 13vh;
+    padding: var(--main-sect-hero-pad);
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -171,15 +189,16 @@ main .container section.hero .line{
 }
 
 /* model */
-/* Add these styles to your existing CSS */
-
 .sphere {
-    height: 33vh;
-    position: relative;
+    height: 55vh;
+    position: absolute;
     width: 100%;
+    top: 5vh;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .model {
