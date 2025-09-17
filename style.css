@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -10,12 +14,16 @@ body{
 :root{
     --purple: #433161;
     --white: #E8E0DE;
+    --pink: #B90469;
+    --blue: #4E8BF5;
+    --light-purple: #73316F;
     --heading: "Sansita", sans-serif;
     --l-space: 3%;
     --h-weight-r: 400;
     --h-weight-b: 700;
     --h-weight-xb: 800;
     --h-weight-bl: 900;
+    --f-s-title: 3.5rem;
 }
 
 /* text */
@@ -25,8 +33,9 @@ body{
 h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     padding: 0;
+    line-height: normal;
 }
-.name{
+.subH{
     color: var(--purple);
     text-transform: uppercase;
     font-family: var(--heading);
@@ -42,6 +51,7 @@ h1, h2, h3, h4, h5, h6, p{
     font-weight: var(--h-weight-r);
     margin: 0;
     flex-shrink: 0;
+    font-size: var(--f-s-title);
 }
 
 /* content */
@@ -69,20 +79,67 @@ header .container hr {
 main .container{
     width: 100vw;
     margin: 0;
+    min-height: calc(100vh - 59px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 main .container section.hero{
     margin: 0;
     max-width: fit-content;
     height: 60vh;
     background-color: var(--purple);
-    padding: 0 20px;
+    padding: 0 20px 13vh;
     display: flex;
     flex-direction: column;
     justify-content: end;
 }
+main .container section.hero h1.title{
+    padding: 0 0 .25em;
+}
 main .container section.hero .line{
     border-left: var(--white) solid 1px;
-    padding: 0 0 0 1em;
-    width: 100%;
+    padding: 1.5em 1em;
+    max-width: 100%;
     color: var(--white);
+}
+
+/* nav */
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    min-height: 90vh;
+    position: fixed;
+    width: 100%;
+}
+nav .container{
+    min-width: 65vw;
+    min-height: fit-content;
+    max-height: 2em;
+    padding: .5em 1em;
+    border-radius: 3em;
+    background-color: var(--blue);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+}
+nav .container p{
+    line-height: 1;
+    padding-bottom: 1px;
+    color: var(--white);
+}
+nav .container .icon{
+    display: flex;
+    align-items: center;
+    height: .25em;
+    width: auto;
+    padding-bottom: -0.5px;
+}
+nav .container .icon img{
+    width: auto;
+    height: 100%;
 }
