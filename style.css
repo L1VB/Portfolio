@@ -17,13 +17,14 @@ body{
     --pink: #B90469;
     --blue: #4E8BF5;
     --light-purple: #73316F;
-    --heading: "Sansita", sans-serif;
+    --font: "Sansita", sans-serif;
     --l-space: 3%;
     --h-weight-r: 400;
     --h-weight-b: 700;
     --h-weight-xb: 800;
     --h-weight-bl: 900;
     --f-s-title: 3.5rem;
+    --f-s-regular: 1rem;
 }
 
 /* text */
@@ -34,11 +35,11 @@ h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     padding: 0;
     line-height: normal;
+    font-family: var(--font);
 }
 .subH{
     color: var(--purple);
     text-transform: uppercase;
-    font-family: var(--heading);
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
     margin: 0;
@@ -46,12 +47,19 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .title{
     color: var(--white);
-    font-family: var(--heading);
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
     margin: 0;
     flex-shrink: 0;
     font-size: var(--f-s-title);
+}
+.reg{
+    color: var(--white);
+    letter-spacing: var(--l-space);
+    font-weight: var(--h-weight-r);
+    margin: 0;
+    flex-shrink: 0;
+    font-size: var(--f-s-regular);
 }
 
 /* content */
