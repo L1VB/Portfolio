@@ -2,14 +2,16 @@ import * as THREE from "three";
 import { OrbitControls} from "jsm/controls/OrbitControls.js";
 
 // renderer
-const w = window.innerWidth;
-const h = window.innerHeight;
+const modelContainer = document.querySelector('.model');
+const w = modelContainer ? modelContainer.offsetWidth : window.innerWidth;
+const h = modelContainer ? modelContainer.offsetHeight : window.innerHeight;
 const renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize(w, h);
-document.body.appendChild(renderer.domElement);
+renderer.setClearColor(0x000000, 0); // transparent background
+modelContainer.appendChild(renderer.domElement);
 
 //camera
-const fov = 75; // Field of View, 75 degress
+const fov = 85; // Field of View, 75 degress
 const aspect = w / h;
 const near = 0.1; // 0.1 is when it starts rendering, anything closer to the camera and its invisable
 const far = 10;
@@ -20,7 +22,7 @@ const scene = new THREE.Scene();
 // controls
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
-controls.dampingFactor = 0.003;
+// controls.dampingFactor = 0.003;
 
 // designing scene
 const geo = new THREE.IcosahedronGeometry(1.0,2);

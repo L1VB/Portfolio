@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    width: 100vw;
+}
+
+:root{
+    --purple: #433161;
+    --white: #E8E0DE;
+    --heading: "Sansita", sans-serif;
+    --l-space: 3%;
+    --h-weight-r: 400;
+    --h-weight-b: 700;
+    --h-weight-xb: 800;
+    --h-weight-bl: 900;
+}
+
+.italic{
+    font-style: italic;
+}
+
+/* content */
+
+/* header */
+header .container{
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container hr {
+    flex: 1;
+    height: 1px;
+    border: none;
+    background-color: var(--purple);
+    margin: 0 20px;
+}
+
+header .container .name{
+    color: var(--purple);
+    text-transform: uppercase;
+    font-family: var(--heading);
+    letter-spacing: var(--l-space);
+    font-weight: var(--h-weight-r);
+    margin: 0;
+    flex-shrink: 0;
+}
