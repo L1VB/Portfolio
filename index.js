@@ -49,8 +49,18 @@ scene.add(hemiLight);
 // final render
 function animate(t = 0){
     requestAnimationFrame(animate);
-    // mesh.rotation.y = t * 0.0001;
+    mesh.rotation.y = t * 0.0001;
     renderer.render(scene,camera);
     controls.update();
 }
 animate();
+
+// Handle resize
+    function onWindowResize() {
+        const newW = modelContainer.offsetWidth;
+        const newH = modelContainer.offsetHeight;
+        camera.aspect = newW / newH;
+        camera.updateProjectionMatrix();
+        renderer.setSize(newW, newH);
+    }
+    window.addEventListener('resize', onWindowResize);
