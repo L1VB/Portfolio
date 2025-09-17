@@ -88,7 +88,8 @@ nav{
     display: flex;
     justify-content: center;
     align-items: end;
-    min-height: 90vh;
+    bottom: 2em;
+    padding: 0 1em;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -96,7 +97,7 @@ nav{
 nav .container{
     min-width: 65vw;
     min-height: fit-content;
-    max-height: 2em;
+    height: auto;
     padding: .5em 1em;
     border-radius: 3em;
     background-color: var(--blue);
