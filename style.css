@@ -88,17 +88,17 @@ nav{
     display: flex;
     justify-content: center;
     align-items: end;
-    bottom: 2em;
-    padding: 0 1em;
     position: fixed;
     width: 100%;
+    bottom: 2rem;
     z-index: 1;
+    padding: 0 1rem;
 }
 nav .container{
     min-width: 65vw;
     min-height: fit-content;
     height: auto;
-    padding: .5em 1em;
+    padding: .75em 1em;
     border-radius: 3em;
     background-color: var(--blue);
     z-index: 1;
@@ -116,7 +116,7 @@ nav .container p{
 nav .container .icon{
     display: flex;
     align-items: center;
-    height: .25em;
+    height: 1em;
     width: auto;
     padding-bottom: -0.5px;
 }
