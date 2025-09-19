@@ -1,0 +1,26 @@
+main{
+    padding: 0 20px;
+}
+.list{
+    width: 100%;
+    height: fit-content;
+    padding: 2em 0 0;
+}
+.list .card .content{
+    display: flex;
+    padding: 0 0 .25em 1em;
+}
+.list .card .content .text{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    padding: 0 1em 0 0;
+}
+.list .card .content .cover{
+    width: 40%;
+    height: auto;
+}
+.list .card .content .cover img{
+    width: 100%;
+    height: auto;
+}
