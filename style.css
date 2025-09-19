@@ -5,8 +5,8 @@
 }
 
 body{
-    margin: 0 0 3em;
-    padding: 0;
+    margin: 0;
+    padding: 0 0 3em;
     background-color: var(--white);
     width: 100vw;
 }
@@ -37,6 +37,8 @@ hr{
     --f-s-medium: 1.5rem;
 
     --main-h: 60vh;
+
+    --transi-am: 300ms ease;
 }
 
 @media (min-width: 480px) {
@@ -148,19 +150,78 @@ nav .container{
 }
 nav .container p{
     line-height: 1;
-    padding-bottom: 1px;
     color: var(--white);
 }
+
 nav .container .icon{
-    display: flex;
-    align-items: center;
-    height: 1em;
-    width: auto;
-    padding-bottom: -0.5px;
+    position: relative;
+    height: 1.5em;
+    width: 1.5em;
 }
-nav .container .icon img{
-    width: auto;
-    height: 100%;
+nav .container .icon span:nth-child(1){
+    top: 25%;
+}
+nav .container .icon span:nth-child(3){
+    top: 75%;
+}
+nav .container .icon span{
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #E8E0DE;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--transi-am);
+}
+
+nav .container .icon.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+nav .container .icon.active span:nth-child(2){
+    opacity: 0;
+}
+nav .container .icon.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* navOpen */
+.navOpen{
+    width: 100vw;
+    height: 100vh;
+    background-color: #960455;
+    z-index: 50;
+    position: fixed;
+    bottom: -150vh;
+    left: 0;
+    transition: var(--transi-am);
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 0 0 3em;
+}
+.navOpen.active{
+    bottom: 0;
+    transition: var(--transi-am);
+}
+
+.navOpen .container{
+    padding: 20px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.navOpen .container .buttons a h2{
+    text-align: center;
+    padding: .5em 0;
+}
+.navOpen .container .details{
+    text-align: center;
 }
 
 /* main */
@@ -272,25 +333,4 @@ main .container section.hero .line{
     "num pro-des pro-des"
     "cover cover cover";
     padding: 0 0 1em;
-}
-
-/* navOpen */
-.navOpen{
-    width: 100vw;
-    height: 100vh;
-    background-color: #B90469;
-}
-.navOpen .container{
-    padding: 20px;
-    height: 85%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.navOpen .container .close{
-    display: flex;
-    justify-content: end;
-}
-.navOpen .container .buttons a:first-of-type{
-    padding: 0 15em;
 }
