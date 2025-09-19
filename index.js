@@ -22,6 +22,7 @@ const scene = new THREE.Scene();
 // controls
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
+controls.enableZoom = false;
 // controls.dampingFactor = 0.003;
 
 // designing scene
