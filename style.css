@@ -273,3 +273,24 @@ main .container section.hero .line{
     "cover cover cover";
     padding: 0 0 1em;
 }
+
+/* navOpen */
+.navOpen{
+    width: 100vw;
+    height: 100vh;
+    background-color: #B90469;
+}
+.navOpen .container{
+    padding: 20px;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.navOpen .container .close{
+    display: flex;
+    justify-content: end;
+}
+.navOpen .container .buttons a:first-of-type{
+    padding: 0 15em;
+}
