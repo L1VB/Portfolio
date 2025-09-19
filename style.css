@@ -70,6 +70,7 @@ h1, h2, h3, h4, h5, h6, p{
     text-transform: uppercase;
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
+    word-spacing: .1rem;
     margin: 0;
     flex-shrink: 0;
 }
@@ -294,6 +295,7 @@ main .container section.hero .line{
 }
 .work .container .text h2{
     padding: .5em 0;
+    word-spacing: 5px;
 }
 .work .container .text{
     display: flex;
@@ -309,10 +311,10 @@ main .container section.hero .line{
 }
 
 .work .container .project{
-    padding: .5em 0 7em;
+    padding: .5em 0 6em;
 }
 .work .container .project:last-of-type{
-    padding: .5em 0 3.5em;
+    padding: .5em 0 3em;
 }
 .work .container .project .content .cover{
     width: calc(100vw - 40px);
