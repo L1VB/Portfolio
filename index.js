@@ -27,7 +27,7 @@ controls.enableDamping = true;
 // designing scene
 const geo = new THREE.IcosahedronGeometry(1.0,2);
 const mat = new THREE.MeshStandardMaterial({
-    color: 0xffffff,
+    color: 0xE8E0DE,
     flatShading: true // sees all the faces
 });
 const mesh = new THREE.Mesh(geo, mat);
@@ -35,7 +35,7 @@ scene.add(mesh)
 
 // new material
 const wireMat = new THREE.MeshBasicMaterial({
-    color: 0xffffff,
+    color: 0xE8E0DE,
     wireframe: true
 });
 const wireMesh = new THREE.Mesh(geo, wireMat);
@@ -43,7 +43,7 @@ wireMesh.scale.setScalar(1.001);
 mesh.add(wireMesh);
 
 // light
-const hemiLight = new THREE.HemisphereLight(0x0099ff, 0xaa5500);
+const hemiLight = new THREE.HemisphereLight(0x4E8BF5, 0xB90469);
 scene.add(hemiLight);
 
 // final render

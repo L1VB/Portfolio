@@ -11,8 +11,15 @@ body{
     width: 100vw;
 }
 
+hr{
+    height: 1px;
+    border: none;
+    background-color: var(--purple-dark);
+}
+
 /* root */
 :root{
+    --purple-dark: #231632;
     --purple: #433161;
     --white: #E8E0DE;
     --pink: #B90469;
@@ -106,7 +113,7 @@ header .container hr {
     flex: 1;
     height: 1px;
     border: none;
-    background-color: var(--purple);
+    background-color: var(--purple-dark);
     margin: 0 20px;
 }
 
@@ -117,18 +124,18 @@ nav{
     align-items: end;
     position: fixed;
     width: 100%;
-    bottom: 2rem;
+    bottom: -10px;
     z-index: 100;
-    padding: 0 1rem;
+    padding: 0;
 }
 nav .container{
     width: 65vw;
     max-width: 700px;
     min-height: fit-content;
     height: auto;
-    padding: .75em 1em;
-    border-radius: 3em;
-    background-color: var(--blue);
+    padding: .75em 1em 20px;
+    border-radius: 1em 1em 0 0;
+    background-color: var(--pink);
     z-index: 1;
     display: flex;
     justify-content: space-between;
@@ -160,7 +167,7 @@ main{
 }
 main .container{
     width: 100vw;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 56px);
     margin: 0;
     position: relative;
     bottom: 0;
@@ -172,7 +179,7 @@ main .container section.hero{
     margin: 0;
     min-width: fit-content;
     height: var(--main-h);
-    background-color: var(--purple);
+    background-color: var(--purple-dark);
     padding: 0 20px 13vh;
     display: flex;
     flex-direction: column;
@@ -193,7 +200,7 @@ main .container section.hero .line{
     height: 60vh;
     position: absolute;
     width: 100%;
-    top: 7vh;
+    top: 1vh;
     left: 0;
     display: flex;
     justify-content: center;
@@ -212,4 +219,54 @@ main .container section.hero .line{
     display: block;
     width: 100% !important;
     height: 100% !important;
+}
+
+/* work */
+.work{
+    padding: 0;
+}
+.work .container{
+    padding: 1em 20px 0;
+}
+.work .container .text h2{
+    padding: .5em 0;
+}
+.work .container .text{
+    display: flex;
+    align-items: center;
+    padding: 0 0 1em;
+}
+.work .container .text hr{
+    flex: 1;
+    height: 1px;
+    border: none;
+    background-color: var(--purple-dark);
+    margin: 0 0 0 10px;
+}
+
+.work .container .project{
+    padding: .5em 0 7em;
+}
+.work .container .project:last-of-type{
+    padding: .5em 0 3.5em;
+}
+.work .container .project .content .cover{
+    width: calc(100vw - 40px);
+    height: auto;
+}
+.work .container .project .content .cover img{
+    width: 100%;
+    height: 100%;
+}
+
+.work .container .project .content .des{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(auto);
+    grid-template-areas:
+    "num pro-des pro-des"
+    "cover cover cover"
+    "num pro-des pro-des"
+    "cover cover cover";
+    padding: 0 0 1em;
 }
