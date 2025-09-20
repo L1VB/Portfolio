@@ -244,44 +244,57 @@ nav .container .icon.active span:nth-child(3){
     bottom: -150vh;
     left: 0;
     transition: var(--transi-am);
-    display: flex;
-    align-items: end;
-    padding: 0 0 7em;
+    overflow: hidden;
 }
 .navOpen.active{
     bottom: 0;
     transition: var(--transi-am);
 }
 
-.navOpen .container{
-    padding: 20px;
+.navOpen.active .container{
+    padding: 0 20px;
     height: 100%;
     width: 100%;
     overflow: hidden;
-}
-.navOpen .container .buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-}
-.navOpen .container .buttons .other-links{
-    padding: 2em 0;
-}
-.navOpen .container .buttons .other-links a p{
-    color: var(--white);
+    transition: var(--transi-am);
 }
 
-.navOpen .container .details{
-    display: flex;
-    flex-direction: column;
+.navOpen.active .container .categories{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 600ms ease;
 }
-.navOpen .container .details .other-details{
+.navOpen.active .container .categories .other-links a p{
+    color: var(--white);
+    padding: 3em 0 0;
+    transition: 600ms ease;
+}
+
+.navOpen.active .container .details{
+    position: fixed;
+    bottom: 4em;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 0 20px;
+    transition: 600ms ease;
+}
+.navOpen.active .container .details .other-details{
     display: flex;
     justify-content: space-between;
+    transition: 600ms ease;
 }
-.navOpen .container .details .other-details p a{
+.navOpen.active .container .details .other-details p a{
     color: inherit;
+    transition: 600ms ease;
+}
+
+
+
+body.nav-open {
+    overflow: hidden;
+    height: 100vh;
 }
 
 /* arrow */
