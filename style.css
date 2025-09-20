@@ -271,19 +271,17 @@ nav .container .icon.active span:nth-child(3){
 .navOpen .container .buttons .other-links a p{
     color: var(--white);
 }
+
 .navOpen .container .details{
     display: flex;
     flex-direction: column;
-    height: 5em;
-    background-color: #4E8BF5;
-}
-.navOpen .container .details p{
-    position: relative;
 }
 .navOpen .container .details .other-details{
-    position: relative;
     display: flex;
-    z-index: 101;
+    justify-content: space-between;
+}
+.navOpen .container .details .other-details p a{
+    color: inherit;
 }
 
 /* arrow */
