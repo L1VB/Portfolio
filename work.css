@@ -1,6 +1,18 @@
 main{
-    padding: 0 20px;
+    padding: 5em 20px 0;
 }
+
+main .container .top .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+main .container .top .filter{
+    display: flex;
+    gap: .25em;
+    align-items: center;
+}
+
 .list{
     width: 100%;
     height: fit-content;
@@ -23,7 +35,13 @@ main{
     flex-direction: column;
     gap: .25em;
     padding: 0 1em 0 0;
-    max-width: 50%;
+    width: 85%;
+}
+.list .card .content .text h4{
+    width: 100%;
+}
+.list .card .content .text .des{
+    width: 100%;
 }
 .list .card .content .right .cover{
     height: 5em;

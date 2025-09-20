@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -27,6 +28,7 @@ hr{
     --light-purple: #73316F;
 
     --font: "Sansita", sans-serif;
+    --font-basic: "Archivo", sans-serif;
     --l-space: 3%;
     --h-weight-r: 400;
     --h-weight-b: 700;
@@ -64,9 +66,10 @@ h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     padding: 0;
     line-height: normal;
-    font-family: var(--font);
+    font-family: var(--font-basic);
 }
 .subH{
+    font-family: var(--font);
     color: var(--light-purple);
     text-transform: uppercase;
     letter-spacing: var(--l-space);
@@ -76,6 +79,7 @@ h1, h2, h3, h4, h5, h6, p{
     flex-shrink: 0;
 }
 .title{
+    font-family: var(--font);
     color: var(--white);
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-b);
@@ -122,6 +126,12 @@ a{
 /* content */
 
 /* header */
+header{
+    position: fixed;
+    z-index: 101;
+    width: 100%;
+    background-color: var(--white);
+}
 header .container{
     width: 100%;
     height: 100%;
@@ -139,9 +149,18 @@ header .container hr {
     background-color: var(--purple);
     margin: 0 20px;
 }
-header.active .container a .subH{
+
+header.active{
+    z-index: 101;
+    background-color: #23163200;
+}
+header.active .container{
+    z-index: 101;
+    transition: 2s ease;
+}
+header.active .container a .subH {
     color: var(--white) !important;
-    z-index: 100;
+    z-index: 101; 
 }
 header.active .container hr{
     background-color: var(--white);
@@ -227,7 +246,7 @@ nav .container .icon.active span:nth-child(3){
     transition: var(--transi-am);
     display: flex;
     align-items: end;
-    padding: 0 0 3em;
+    padding: 0 0 7em;
 }
 .navOpen.active{
     bottom: 0;
@@ -236,18 +255,35 @@ nav .container .icon.active span:nth-child(3){
 
 .navOpen .container{
     padding: 20px;
-    height: 80%;
+    height: 100%;
     width: 100%;
+    overflow: hidden;
+}
+.navOpen .container .buttons{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    height: 100%;
 }
-.navOpen .container .buttons a h2{
-    padding: .5em 0;
+.navOpen .container .buttons .other-links{
+    padding: 2em 0;
+}
+.navOpen .container .buttons .other-links a p{
+    color: var(--white);
 }
 .navOpen .container .details{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    height: 5em;
+    background-color: #4E8BF5;
+}
+.navOpen .container .details p{
+    position: relative;
+}
+.navOpen .container .details .other-details{
+    position: relative;
+    display: flex;
+    z-index: 101;
 }
 
 /* arrow */

@@ -2,10 +2,11 @@
 main{
     position: relative;
     z-index: 1;
+    height: 100vh;
 }
 main .container{
     width: 100vw;
-    height: calc(100vh - 56px);
+    height: 100%;
     margin: 0;
     position: relative;
     bottom: 0;
@@ -38,7 +39,7 @@ main .container section.hero .line{
     height: 60vh;
     position: absolute;
     width: 100%;
-    top: 1vh;
+    top: 5vh;
     left: 0;
     display: flex;
     justify-content: center;
@@ -84,10 +85,10 @@ main .container section.hero .line{
 }
 
 .work .container .project{
-    padding: .5em 0 6em;
+    padding: 0 0 5em;
 }
 .work .container .project:last-of-type{
-    padding: .5em 0 3em;
+    padding: 0 0 3em;
 }
 .work .container .project .content .cover{
     width: calc(100vw - 40px);
@@ -107,5 +108,5 @@ main .container section.hero .line{
     "cover cover cover"
     "num pro-des pro-des"
     "cover cover cover";
-    padding: 0 0 1em;
+    padding: 1em 0 0;
 }
