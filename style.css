@@ -34,6 +34,7 @@ hr{
     --h-weight-bl: 900;
     --f-s-title: 3rem;
     --f-s-regular: 1rem;
+    --f-s-small: .75rem;
     --f-s-medium: 1.5rem;
 
     --main-h: 60vh;
@@ -66,7 +67,7 @@ h1, h2, h3, h4, h5, h6, p{
     font-family: var(--font);
 }
 .subH{
-    color: var(--purple);
+    color: var(--light-purple);
     text-transform: uppercase;
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
@@ -77,7 +78,7 @@ h1, h2, h3, h4, h5, h6, p{
 .title{
     color: var(--white);
     letter-spacing: var(--l-space);
-    font-weight: var(--h-weight-r);
+    font-weight: var(--h-weight-b);
     margin: 0;
     flex-shrink: 0;
     font-size: var(--f-s-title);
@@ -97,6 +98,22 @@ h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     flex-shrink: 0;
     font-size: var(--f-s-regular);
+}
+.des{
+    color: var(--purple);
+    letter-spacing: var(--l-space);
+    font-weight: var(--h-weight-r);
+    margin: 0;
+    flex-shrink: 0;
+    font-size: var(--f-s-small);
+}
+.note{
+    color: var(--light-purple);
+    letter-spacing: var(--l-space);
+    font-weight: var(--h-weight-r);
+    margin: 0;
+    flex-shrink: 0;
+    font-size: var(--f-s-small);
 }
 a{
     text-decoration: none;
@@ -119,8 +136,16 @@ header .container hr {
     flex: 1;
     height: 1px;
     border: none;
-    background-color: var(--purple-dark);
+    background-color: var(--purple);
     margin: 0 20px;
+}
+header.active .container a .subH{
+    color: var(--white) !important;
+    z-index: 100;
+}
+header.active .container hr{
+    background-color: var(--white);
+    z-index: 100;
 }
 
 /* nav */
@@ -169,7 +194,7 @@ nav .container .icon span{
     display: block;
     height: 2px;
     width: 100%;
-    background-color: #E8E0DE;
+    background-color: var(--white);
     border-radius: 25px;
     position: absolute;
     top: 50%;
@@ -202,7 +227,6 @@ nav .container .icon.active span:nth-child(3){
     transition: var(--transi-am);
     display: flex;
     align-items: end;
-    justify-content: center;
     padding: 0 0 3em;
 }
 .navOpen.active{
@@ -213,14 +237,21 @@ nav .container .icon.active span:nth-child(3){
 .navOpen .container{
     padding: 20px;
     height: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .navOpen .container .buttons a h2{
-    text-align: center;
     padding: .5em 0;
 }
 .navOpen .container .details{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* arrow */
+.arrow{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }

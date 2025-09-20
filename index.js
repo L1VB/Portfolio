@@ -26,7 +26,7 @@ controls.enableZoom = false;
 // controls.dampingFactor = 0.003;
 
 // designing scene
-const geo = new THREE.IcosahedronGeometry(1.0,2);
+const geo = new THREE.IcosahedronGeometry(1.0, 5);
 const mat = new THREE.MeshStandardMaterial({
     color: 0xE8E0DE,
     flatShading: true // sees all the faces
