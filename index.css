@@ -1,3 +1,29 @@
+/* root */
+:root{
+    --purple-dark: #231632;
+    --purple: #433161;
+    --white: #E8E0DE;
+    --bright: #6017AE;
+    --blue: #4E8BF5;
+    --light-purple: #73316F;
+
+    --font: "Sansita", sans-serif;
+    --font-basic: "Archivo", sans-serif;
+    --l-space: 3%;
+    --h-weight-r: 400;
+    --h-weight-b: 700;
+    --h-weight-xb: 800;
+    --h-weight-bl: 900;
+    --f-s-title: 3rem;
+    --f-s-regular: 1rem;
+    --f-s-small: .75rem;
+    --f-s-medium: 1.5rem;
+
+    --main-h: 60vh;
+
+    --transi-am: 500ms ease;
+}
+
 /* main */
 main{
     position: relative;
@@ -63,6 +89,7 @@ main .container section.hero .line{
 /* work */
 .work{
     padding: 0;
+    background-color: var(--purple-dark);
 }
 .work .container{
     padding: 1em 20px 0;
@@ -80,7 +107,7 @@ main .container section.hero .line{
     flex: 1;
     height: 1px;
     border: none;
-    background-color: var(--purple-dark);
+    background-color: var(--white);
     margin: 0 0 0 10px;
 }
 
@@ -97,16 +124,4 @@ main .container section.hero .line{
 .work .container .project .content .cover img{
     width: 100%;
     height: 100%;
-}
-
-.work .container .project .content .des{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(auto);
-    grid-template-areas:
-    "num pro-des pro-des"
-    "cover cover cover"
-    "num pro-des pro-des"
-    "cover cover cover";
-    padding: 1em 0 0;
 }

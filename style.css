@@ -23,7 +23,7 @@ hr{
     --purple-dark: #231632;
     --purple: #433161;
     --white: #E8E0DE;
-    --pink: #B90469;
+    --bright: #6017AE;
     --blue: #4E8BF5;
     --light-purple: #73316F;
 
@@ -41,7 +41,7 @@ hr{
 
     --main-h: 60vh;
 
-    --transi-am: 300ms ease;
+    --transi-am: 500ms ease;
 }
 
 @media (min-width: 480px) {
@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .subH{
     font-family: var(--font);
-    color: var(--light-purple);
+    color: var(--purple);
     text-transform: uppercase;
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
@@ -118,6 +118,18 @@ h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     flex-shrink: 0;
     font-size: var(--f-s-small);
+}
+.word{
+    color: var(--white);
+    letter-spacing: var(--l-space);
+    font-weight: var(--h-weight-r);
+    margin: 0;
+    flex-shrink: 0;
+    font-size: var(--f-s-small);
+    background-color: var(--light-purple);
+    width: fit-content;
+    height: fit-content;
+    padding: 4px;
 }
 a{
     text-decoration: none;
@@ -185,7 +197,7 @@ nav .container{
     height: auto;
     padding: .75em 1em 20px;
     border-radius: 1em 1em 0 0;
-    background-color: var(--pink);
+    background-color: var(--bright);
     z-index: 1;
     display: flex;
     justify-content: space-between;
@@ -238,7 +250,7 @@ nav .container .icon.active span:nth-child(3){
 .navOpen{
     width: 100vw;
     height: 100vh;
-    background-color: #960455;
+    background-color: var(--purple);
     z-index: 50;
     position: fixed;
     bottom: -150vh;
@@ -256,19 +268,17 @@ nav .container .icon.active span:nth-child(3){
     height: 100%;
     width: 100%;
     overflow: hidden;
-    transition: var(--transi-am);
+    transition: 600ms ease;
 }
 
 .navOpen.active .container .categories{
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    transition: 600ms ease;
 }
 .navOpen.active .container .categories .other-links a p{
     color: var(--white);
     padding: 3em 0 0;
-    transition: 600ms ease;
 }
 
 .navOpen.active .container .details{
@@ -283,11 +293,9 @@ nav .container .icon.active span:nth-child(3){
 .navOpen.active .container .details .other-details{
     display: flex;
     justify-content: space-between;
-    transition: 600ms ease;
 }
 .navOpen.active .container .details .other-details p a{
     color: inherit;
-    transition: 600ms ease;
 }
 
 

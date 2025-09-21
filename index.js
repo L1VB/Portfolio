@@ -26,7 +26,7 @@ controls.enableZoom = false;
 // controls.dampingFactor = 0.003;
 
 // designing scene
-const geo = new THREE.IcosahedronGeometry(1.0, 5);
+const geo = new THREE.IcosahedronGeometry(1.0, 4);
 const mat = new THREE.MeshStandardMaterial({
     color: 0xE8E0DE,
     flatShading: true // sees all the faces
@@ -50,6 +50,7 @@ scene.add(hemiLight);
 // final render
 function animate(t = 0){
     requestAnimationFrame(animate);
+    mesh.rotation.x = t * 0.0001;
     mesh.rotation.y = t * 0.0001;
     renderer.render(scene,camera);
     controls.update();
