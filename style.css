@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 
 * {
     box-sizing: border-box;
@@ -8,24 +9,23 @@
 body{
     margin: 0;
     padding: 0 0 3em;
-    background-color: var(--white);
+    background-color: var(--black);
+    color: var(--white);
+    font-family: var(--font-basic);
     width: 100vw;
 }
 
 hr{
     height: 1px;
     border: none;
-    background-color: var(--purple-dark);
+    background-color: var(--white);
 }
 
 /* root */
 :root{
-    --purple-dark: #231632;
-    --purple: #433161;
+    --black: #231632;
     --white: #E8E0DE;
     --bright: #6017AE;
-    --blue: #4E8BF5;
-    --light-purple: #73316F;
 
     --font: "Sansita", sans-serif;
     --font-basic: "Archivo", sans-serif;
@@ -59,18 +59,18 @@ hr{
 .italic{
     font-style: italic;
 }
-.link{
-    color: var(--blue) !important;
+.cursive{
+    font-style: italic;
+    font-family: 'Playball', serif !important;
+    line-height: 1;
 }
 h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     padding: 0;
     line-height: normal;
-    font-family: var(--font-basic);
 }
 .subH{
     font-family: var(--font);
-    color: var(--purple);
     text-transform: uppercase;
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
@@ -80,7 +80,6 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .title{
     font-family: var(--font);
-    color: var(--white);
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-b);
     margin: 0;
@@ -88,7 +87,6 @@ h1, h2, h3, h4, h5, h6, p{
     font-size: var(--f-s-title);
 }
 .reg{
-    color: var(--white);
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
     margin: 0;
@@ -96,7 +94,6 @@ h1, h2, h3, h4, h5, h6, p{
     font-size: var(--f-s-regular);
 }
 .bodyText{
-    color: var(--purple);
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
     margin: 0;
@@ -104,7 +101,6 @@ h1, h2, h3, h4, h5, h6, p{
     font-size: var(--f-s-regular);
 }
 .des{
-    color: var(--purple);
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
     margin: 0;
@@ -112,7 +108,6 @@ h1, h2, h3, h4, h5, h6, p{
     font-size: var(--f-s-small);
 }
 .note{
-    color: var(--light-purple);
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
     margin: 0;
@@ -120,55 +115,50 @@ h1, h2, h3, h4, h5, h6, p{
     font-size: var(--f-s-small);
 }
 .word{
-    color: var(--white);
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
     margin: 0;
     flex-shrink: 0;
     font-size: var(--f-s-small);
-    background-color: var(--light-purple);
+    background-color: var(--blue);
     width: fit-content;
     height: fit-content;
     padding: 4px;
 }
 a{
     text-decoration: none;
+    color: var(--white);
 }
 
 /* content */
 
 /* header */
 header{
-    position: fixed;
     z-index: 101;
     width: 100%;
-    background-color: var(--white);
 }
 header .container{
     width: 100%;
     height: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
     margin: 0;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 header .container hr {
     flex: 1;
     height: 1px;
     border: none;
-    background-color: var(--purple);
     margin: 0 20px;
 }
 
 header.active{
     z-index: 101;
-    background-color: #23163200;
 }
 header.active .container{
     z-index: 101;
-    transition: 2s ease;
 }
 header.active .container a .subH {
     color: var(--white) !important;
@@ -186,24 +176,30 @@ nav{
     align-items: end;
     position: fixed;
     width: 100%;
-    bottom: -10px;
+    bottom: 10px;
     z-index: 100;
     padding: 0;
 }
 nav .container{
-    width: 65vw;
+    width: 40vw;
     max-width: 700px;
     min-height: fit-content;
     height: auto;
-    padding: .75em 1em 20px;
-    border-radius: 1em 1em 0 0;
-    background-color: var(--bright);
+    padding: .75em 1em;
+    border-radius: .5em;
     z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     overflow: hidden;
+    
+    background: rgba(143, 16, 134, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(115, 49, 111, 0.35);
 }
 nav .container p{
     line-height: 1;
