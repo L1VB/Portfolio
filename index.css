@@ -21,16 +21,23 @@
     --transi-am: 500ms ease;
 }
 
+/* nav */
+nav{
+    position: relative;
+}
+
 /* main */
 main{
     position: relative;
     z-index: 1;
-    height: calc(100vh - 50px);
+    height: 100vh;
+    width: 100%;
     display: flex;
     padding: 0 20px;
 }
 main .container{
     height: 100%;
+    padding: 50px 0 20px;
     position: absolute;
     top: 0;
     display: flex;
@@ -57,12 +64,18 @@ main .container section.arrow-down{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+main .container section.arrow-down p:last-of-type{
+    font-size: 2.5rem;
+    line-height: 0;
+    padding: 0 0 .5em;
 }
 
 /* model */
 .sphere {
     height: 60vh;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 28%;
     left: 50%;
@@ -76,7 +89,7 @@ main .container section.arrow-down{
 .model {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
     z-index: 1;
 }
 
@@ -88,11 +101,8 @@ main .container section.arrow-down{
 
 /* work */
 .work{
-    padding: 0;
+    padding: 3em 20px;
     background-color: var(--purple-dark);
-}
-.work .container{
-    padding: 1em 20px 0;
 }
 .work .container .text h2{
     padding: .5em 0;
@@ -108,7 +118,6 @@ main .container section.arrow-down{
     height: 1px;
     border: none;
     background-color: var(--white);
-    margin: 0 0 0 10px;
 }
 
 .work .container .project{
