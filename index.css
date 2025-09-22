@@ -33,9 +33,6 @@ main{
     height: 100vh;
     width: 100%;
     padding: 0 20px;
-
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
 }
 main .container{
     height: 100%;
@@ -115,7 +112,4 @@ section.intro .container{
     display: flex;
     flex-direction: column;
     justify-content: end;
-
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
 }
