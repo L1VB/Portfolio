@@ -32,7 +32,6 @@ main{
     z-index: 1;
     height: 100vh;
     width: 100%;
-    display: flex;
     padding: 0 20px;
 }
 main .container{
@@ -97,4 +96,20 @@ main .container section.arrow-down p:last-of-type{
     display: block;
     width: 100% !important;
     height: 100% !important;
+}
+
+/* intro */
+section.intro{
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    padding: 0 20px;
+
+    background-color: rgba(0, 255, 255, 0.134);
+}
+section.intro .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
