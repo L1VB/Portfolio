@@ -69,6 +69,22 @@ h1, h2, h3, h4, h5, h6, p{
     padding: 0;
     line-height: normal;
 }
+.title{
+    font-family: var(--font);
+    letter-spacing: var(--l-space);
+    font-weight: var(--h-weight-b);
+    margin: 0;
+    flex-shrink: 0;
+    font-size: var(--f-s-title);
+}
+.title-2{
+    font-family: var(--font);
+    letter-spacing: var(--l-space);
+    font-weight: var(--h-weight-b);
+    margin: 0;
+    flex-shrink: 0;
+    font-size: var(--f-s-medium);
+}
 .subH{
     font-family: var(--font);
     text-transform: uppercase;
@@ -78,22 +94,16 @@ h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     flex-shrink: 0;
 }
-.title{
-    font-family: var(--font);
-    letter-spacing: var(--l-space);
-    font-weight: var(--h-weight-b);
-    margin: 0;
-    flex-shrink: 0;
-    font-size: var(--f-s-title);
-}
-.reg{
+.subH-2{
+    text-transform: uppercase;
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
+    font-size: var(--f-s-small);
+    word-spacing: .1rem;
     margin: 0;
     flex-shrink: 0;
-    font-size: var(--f-s-regular);
 }
-.bodyText{
+.reg{
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
     margin: 0;
@@ -106,24 +116,6 @@ h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     flex-shrink: 0;
     font-size: var(--f-s-small);
-}
-.note{
-    letter-spacing: var(--l-space);
-    font-weight: var(--h-weight-r);
-    margin: 0;
-    flex-shrink: 0;
-    font-size: var(--f-s-small);
-}
-.word{
-    letter-spacing: var(--l-space);
-    font-weight: var(--h-weight-r);
-    margin: 0;
-    flex-shrink: 0;
-    font-size: var(--f-s-small);
-    background-color: var(--blue);
-    width: fit-content;
-    height: fit-content;
-    padding: 4px;
 }
 a{
     text-decoration: none;

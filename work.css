@@ -1,53 +1,35 @@
-main{
-    padding: 5em 20px 0;
+/* work */
+.work{
+    padding: 3em 20px;
+    background-color: var(--purple-dark);
 }
-
-main .container .top .heading{
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
+.work .container .text h2{
+    padding: .5em 0;
+    word-spacing: 5px;
 }
-main .container .top .filter{
+.work .container .text{
     display: flex;
-    gap: .25em;
     align-items: center;
+    padding: 0 0 1em;
+}
+.work .container .text hr{
+    flex: 1;
+    height: 1px;
+    border: none;
+    background-color: var(--white);
 }
 
-.list{
+.work .container .project{
+    padding: 0 0 5em;
+}
+.work .container .project:last-of-type{
+    padding: 0 0 3em;
+}
+.work .container .project .content .cover{
+    width: calc(100vw - 40px);
+    height: auto;
+}
+.work .container .project .content .cover img{
     width: 100%;
-    height: fit-content;
-    padding: 2em 0 0;
-}
-.list .card .content{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0 .25em 1em;
-    width: 100%;
-}
-.list .card .content .right{
-    display: flex;
-    justify-content: right;
-    gap: .5em;
-    width: 100%;
-}
-.list .card .content .text{
-    display: flex;
-    flex-direction: column;
-    gap: .25em;
-    padding: 0 1em 0 0;
-    width: 85%;
-}
-.list .card .content .text h4{
-    width: 100%;
-}
-.list .card .content .text .des{
-    width: 100%;
-}
-.list .card .content .right .cover{
-    height: 5em;
-    width: auto;
-}
-.list .card .content .right .cover img{
-    height: inherit;
-    width: auto;
+    height: 100%;
 }

@@ -98,39 +98,3 @@ main .container section.arrow-down p:last-of-type{
     width: 100% !important;
     height: 100% !important;
 }
-
-/* work */
-.work{
-    padding: 3em 20px;
-    background-color: var(--purple-dark);
-}
-.work .container .text h2{
-    padding: .5em 0;
-    word-spacing: 5px;
-}
-.work .container .text{
-    display: flex;
-    align-items: center;
-    padding: 0 0 1em;
-}
-.work .container .text hr{
-    flex: 1;
-    height: 1px;
-    border: none;
-    background-color: var(--white);
-}
-
-.work .container .project{
-    padding: 0 0 5em;
-}
-.work .container .project:last-of-type{
-    padding: 0 0 3em;
-}
-.work .container .project .content .cover{
-    width: calc(100vw - 40px);
-    height: auto;
-}
-.work .container .project .content .cover img{
-    width: 100%;
-    height: 100%;
-}
