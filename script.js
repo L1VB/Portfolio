@@ -1,3 +1,8 @@
+// 3D model
+const model = document.getElementById("model");
+const main = Array.from(document.querySelectorAll("main"));
+
+// nav toggle
 const hamMenu = document.querySelector('nav');
 const icon = document.querySelector('.icon');
 const offScreenMenu = document.querySelector('.navOpen');

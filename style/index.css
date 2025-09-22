@@ -27,14 +27,14 @@ nav{
 }
 
 /* main */
-main{
+main.landing{
     position: relative;
     z-index: 1;
     height: 100vh;
     width: 100%;
     padding: 0 20px;
 }
-main .container{
+main.landing .container{
     height: 100%;
     padding: 50px 0 20px;
     position: absolute;
@@ -43,14 +43,14 @@ main .container{
     flex-direction: column;
     justify-content: space-between;
 }
-main .container section.hero{
+main.landing .container section.hero{
     margin: 0;
     min-width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: end;
 }
-main .container section.hero .text aside{
+main.landing .container section.hero .text aside{
     display: flex;
     justify-content: end;
     align-items: center;
@@ -58,58 +58,63 @@ main .container section.hero .text aside{
     gap: .75em;
     padding: 0 0 1.5em;
 }
-main .container section.arrow-down{
+main.landing .container section.arrow-down{
     width: calc(100vw - 40px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-main .container section.arrow-down p:last-of-type{
+main.landing .container section.arrow-down p:last-of-type{
     font-size: 2.5rem;
     line-height: 0;
     padding: 0 0 .5em;
 }
 
-/* model */
-.sphere {
-    height: 60vh;
-    position: fixed;
-    width: 100%;
-    top: 28%;
-    left: 50%;
-    transform: translate(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
-
-.model {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-}
-
-.model canvas {
-    display: block;
-    width: 100% !important;
-    height: 100% !important;
-}
-
 /* intro */
-section.intro{
+main.intro{
     position: relative;
     z-index: 1;
     height: 100vh;
     width: 100%;
-    padding: 0 20px;
-
-    background-color: rgba(0, 255, 255, 0.134);
-}
-section.intro .container{
+    padding: 0 20px 10%;
     display: flex;
     flex-direction: column;
     justify-content: end;
+
+    background-color: rgba(0, 255, 255, 0.134);
+}
+main.intro .container .controls{
+    display: flex;
+    gap: 1em;
+    padding: 0 0 2em;
+}
+main.intro .container .buttons{
+    width: 2.5em;
+    height: 2.5em;
+    border: 3px var(--white) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5em;
+    color: var(--white);
+    font-weight: var(--h-weight-xb);
+}
+main.intro .container .text h3.title-2{
+    padding: 0 0 5px;
+}
+main.intro .container .text p.des{
+    padding: .5em 1em;
+    border-left: 1px var(--white) solid;
+    height: fit-content;
+}
+
+/* 3D model */
+#model{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 70;
+    transition: transform 1s ease-out;
 }
