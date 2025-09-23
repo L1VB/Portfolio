@@ -123,7 +123,7 @@ main.intro{
     z-index: 1;
     height: 100dvh;
     width: 100%;
-    padding: 5% 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -156,7 +156,7 @@ main.intro .portfolio .content{
     left: 50%;
     transform: translate(-50%);
     width: 50%;
-    height: 40%;
+    height: 45%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -167,6 +167,7 @@ main.intro .portfolio .content .bottom{
     display: flex;
     flex-direction: column;
     justify-content: center; 
+    /* arrow update ^^ */
 }
 
 /* 3D model */
