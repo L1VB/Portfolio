@@ -205,6 +205,13 @@ footer .container section.top .content{
     width: 100%;
     height: 20dvh;
 }
+footer .container section.page-links .content .last a.reg{
+    color: var(--black);
+    z-index: 10;
+}
+footer .container section.social-media .content{
+    padding: 1em 0 3em;
+}
 footer .container section.page-links .content,
 footer .container section.social-media .content{
     width: 100%;
@@ -213,9 +220,6 @@ footer .container section.social-media .content{
     flex-direction: column;
     gap: 1em;
     padding: 1em 0;
-}
-footer .container section.social-media .content{
-    padding: 1em 0 3em;
 }
 footer .container section.page-links .content .text a,
 footer .container section.social-media .text a{
