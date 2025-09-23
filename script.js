@@ -1,9 +1,10 @@
+// MODEL
 const model = document.getElementById("model");
 const sections = Array.from(document.querySelectorAll("main"));
 
-const shiftPositions = [0, -10, 0, 15];
-const shiftPositionsY = [10, 10, -10, -5];
-const shiftScale = [1, 0.8, 1.25, 1.1];
+const shiftPositions = [0, 0, 0, 15];
+const shiftPositionsY = [0, -5, -15, -5];
+const shiftScale = [1, 1.25, 0.8, 1.1];
 const cameraOrbits = [[45, 45], [-180, 90], [90, 0], [0, 90]];
 
 const sectionOffsets = sections.map(section => section.offsetTop);
@@ -21,8 +22,8 @@ const getScrollProgress = scrollY => {
     return lastSectionIndex;
 };
 
-window.addEventListener("scroll", () => {
-    const scrollProgess = getScrollProgress(window.scrollY);
+const updateModel = (scrollY) => {
+    const scrollProgess = getScrollProgress(scrollY);
     const sectionIndex = Math.floor(scrollProgess);
     const sectionProgress = scrollProgess - sectionIndex;
 
@@ -50,10 +51,98 @@ window.addEventListener("scroll", () => {
     
     model.style.transform = `translateX(${currentShift}%) translateY(${currentShiftY}%) scale(${currentScale})`;
     model.setAttribute("camera-orbit", `${currentOrbit[0]}deg ${currentOrbit[1]}deg`);
+};
+
+// SCROLL
+let isScrolling = false;
+let scrollTimeout;
+let currentSectionIndex = 0;
+const scrollThreshold = 50;
+
+const getCurrentSectionIndex = scrollY => {
+    for (let i = 0; i < sections.length; i++) {
+        const sectionTop = sectionOffsets[i];
+        const sectionBottom = sectionOffsets[i + 1] || document.body.scrollHeight;
+        
+        if (scrollY >= sectionTop - window.innerHeight / 2 && scrollY < sectionBottom - window.innerHeight / 2) {
+            return i;
+        }
+    }
+    return Math.min(Math.max(Math.round(scrollY / window.innerHeight), 0), lastSectionIndex);
+};
+
+const snapToSection = (targetIndex) => {
+    if (targetIndex < 0 || targetIndex > lastSectionIndex) return;
+    
+    isScrolling = true;
+    const targetOffset = sectionOffsets[targetIndex];
+    
+    window.scrollTo({
+        top: targetOffset,
+        behavior: 'smooth'
+    });
+    
+    currentSectionIndex = targetIndex;
+    
+    setTimeout(() => {
+        isScrolling = false;
+    }, 800);
+};
+
+let lastScrollY = window.scrollY;
+let scrollDirection = 0;
+
+window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+    
+    updateModel(currentScrollY);
+    
+    if (isScrolling) return;
+    
+    scrollDirection = currentScrollY > lastScrollY ? 1 : -1;
+    lastScrollY = currentScrollY;
+    
+    clearTimeout(scrollTimeout);
+    
+    scrollTimeout = setTimeout(() => {
+        const detectedSectionIndex = getCurrentSectionIndex(currentScrollY);
+        const scrollDistance = Math.abs(currentScrollY - sectionOffsets[currentSectionIndex]);
+        
+        if (scrollDistance > scrollThreshold && detectedSectionIndex !== currentSectionIndex) {
+            snapToSection(detectedSectionIndex);
+        } else if (scrollDistance > scrollThreshold) {
+            const targetIndex = currentSectionIndex + scrollDirection;
+            snapToSection(targetIndex);
+        }
+    }, 100);
 });
 
+let wheelTimeout;
+window.addEventListener("wheel", (e) => {
+    if (isScrolling) {
+        e.preventDefault();
+        return;
+    }
+    
+    clearTimeout(wheelTimeout);
+    
+    wheelTimeout = setTimeout(() => {
+        const delta = e.deltaY;
+        const targetIndex = delta > 0 ? 
+            Math.min(currentSectionIndex + 1, lastSectionIndex) : 
+            Math.max(currentSectionIndex - 1, 0);
+        
+        if (Math.abs(delta) > 10 && targetIndex !== currentSectionIndex) {
+            snapToSection(targetIndex);
+        }
+    }, 50);
+}, { passive: false });
 
-// nav toggle
+window.addEventListener("load", () => {
+    currentSectionIndex = getCurrentSectionIndex(window.scrollY);
+});
+
+// NAV TOGGLE
 const hamMenu = document.querySelector('nav');
 const icon = document.querySelector('.icon');
 const offScreenMenu = document.querySelector('.navOpen');
@@ -63,4 +152,4 @@ hamMenu.addEventListener('click', () => {
     icon.classList.toggle('active');
     offScreenMenu.classList.toggle('active');
     header.classList.toggle('active');
-})
+});
