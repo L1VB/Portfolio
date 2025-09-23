@@ -1,7 +1,7 @@
 const model = document.getElementById("model");
 const sections = Array.from(document.querySelectorAll("main"));
 
-const shiftPositions = [0, -20, 0, 25];
+const shiftPositions = [0, -20, 0, 15];
 const cameraOrbits = [[45, 45], [-180, 90], [90, 0], [0, 90]];
 
 const sectionOffsets = sections.map(section => section.offsetTop);

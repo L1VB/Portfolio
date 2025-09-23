@@ -77,12 +77,15 @@ main.intro{
     z-index: 1;
     height: 100vh;
     width: 100%;
-    padding: 0 20px 10%;
+    padding: 0 20px 5%;
     display: flex;
     flex-direction: column;
     justify-content: end;
 
     background-color: rgba(0, 255, 255, 0.134);
+}
+main.intro:nth-of-type(3){
+    background-color: rgba(102, 255, 0, 0.134);
 }
 main.intro .container .controls{
     display: flex;
