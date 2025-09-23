@@ -24,11 +24,12 @@
 /* nav */
 nav{
     position: relative;
+    padding: 2em 0 0;
 }
 
 /* background */
 .background{
-    position: absolute;
+    position: fixed;
     overflow-y: scroll;
     top: 0;
     left: 0;
@@ -37,6 +38,15 @@ nav{
     background-image: url('https://media.cntraveler.com/photos/5eb18e42fc043ed5d9779733/1:1/w_2866,h_2866,c_limit/BlackForest-Germany-GettyImages-147180370.jpg');
     background-position: center;
     background-size: cover;
+}
+
+/* header */
+header .container hr{
+    background-color: var(--black);
+}
+header .container a,
+main.landing{
+    color: var(--black);
 }
 
 /* main */
@@ -88,7 +98,7 @@ main.landing .container section.arrow-down a:last-of-type{
 main.intro{
     position: relative;
     z-index: 1;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     padding: 5% 20px;
     display: flex;
@@ -155,4 +165,86 @@ main.intro .portfolio .content .bottom{
     z-index: 70;
     transition: transform 1s ease-out;
     margin: 110px 0 0;
+}
+
+/* footer */
+footer{
+    width: 100dvw;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+    padding: 3em 0;
+    color: var(--black);
+}
+footer .container{
+    padding: 1em 20px 2em;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+}
+footer .container hr{
+    background-color: var(--black);
+}
+footer .container section.top .content{
+    width: 100%;
+    height: 30dvh;
+}
+footer .container section.page-links .content,
+footer .container section.social-media .content{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    padding: 1em 0;
+}
+footer .container section.social-media .content{
+    padding: 1em 0 3em;
+}
+footer .container section.page-links .content .text a,
+footer .container section.social-media .text a{
+    color: var(--black);
+}
+footer .container section.page-links .content .break,
+footer .container section.social-media .content .break{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+footer .container section.page-links .content .break hr,
+footer .container section.social-media .content .break hr{
+    flex: 1;
+    height: 1px;
+    border: none;
+    margin: 0 0 0 10px;
+}
+
+footer .container section.bottom{
+    display: flex;
+    flex-direction: column;
+    height: 10dvh;
+    justify-content: space-between;
+}
+footer .container section.bottom .details{
+    display: flex;
+    justify-content: space-between;
+}
+footer .container section.bottom .buttons{
+    width: 2.5em;
+    height: 2.5em;
+    border: 3px var(--black) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5em;
+    color: var(--black);
+    font-weight: var(--h-weight-xb);
+}
+footer .container section.bottom .button a{
+    color: var(--black);
 }

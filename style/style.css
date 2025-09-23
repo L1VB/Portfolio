@@ -90,6 +90,15 @@ h1, h2, h3, h4, h5, h6, p{
     flex-shrink: 0;
     font-size: var(--f-s-medium);
 }
+.title-3{
+    text-transform: uppercase;
+    font-family: var(--font);
+    letter-spacing: var(--l-space);
+    font-weight: var(--h-weight-b);
+    margin: 0;
+    flex-shrink: 0;
+    font-size: var(--f-s-medium);
+}
 .subH{
     font-family: var(--font);
     text-transform: uppercase;
@@ -103,6 +112,15 @@ h1, h2, h3, h4, h5, h6, p{
     text-transform: uppercase;
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
+    font-size: var(--f-s-small);
+    word-spacing: .1rem;
+    margin: 0;
+    flex-shrink: 0;
+}
+.subH-3{
+    text-transform: uppercase;
+    letter-spacing: var(--l-space);
+    font-weight: var(--h-weight-b);
     font-size: var(--f-s-small);
     word-spacing: .1rem;
     margin: 0;
@@ -145,7 +163,7 @@ header .container{
     justify-content: center;
     align-items: center; 
 }
-header .container hr {
+header .container hr{
     flex: 1;
     height: 1px;
     border: none;

@@ -1,10 +1,10 @@
 // MODEL
 const model = document.getElementById("model");
-const sections = Array.from(document.querySelectorAll("main"));
+const sections = Array.from(document.querySelectorAll("main", "footer"));
 
 const shiftPositions = [0, 0, 0, 15];
-const shiftPositionsY = [0, -5, -15, -5];
-const shiftScale = [1, 1.25, 0.8, 1.1];
+const shiftPositionsY = [0, -5, -15, 15];
+const shiftScale = [1, 1.25, 0.8, 0.1];
 const cameraOrbits = [[45, 45], [-180, 90], [90, 0], [0, 90]];
 
 const sectionOffsets = sections.map(section => section.offsetTop);
