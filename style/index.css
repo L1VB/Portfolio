@@ -26,11 +26,24 @@ nav{
     position: relative;
 }
 
+/* background */
+.background{
+    position: absolute;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-image: url('https://media.cntraveler.com/photos/5eb18e42fc043ed5d9779733/1:1/w_2866,h_2866,c_limit/BlackForest-Germany-GettyImages-147180370.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
 /* main */
 main.landing{
     position: relative;
     z-index: 1;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     padding: 0 20px;
 }
