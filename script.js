@@ -1,7 +1,9 @@
 const model = document.getElementById("model");
 const sections = Array.from(document.querySelectorAll("main"));
 
-const shiftPositions = [0, -20, 0, 15];
+const shiftPositions = [0, -10, 0, 15];
+const shiftPositionsY = [10, 10, -10, -5];
+const shiftScale = [1, 0.8, 1.25, 1.1];
 const cameraOrbits = [[45, 45], [-180, 90], [90, 0], [0, 90]];
 
 const sectionOffsets = sections.map(section => section.offsetTop);
@@ -30,11 +32,23 @@ window.addEventListener("scroll", () => {
         sectionProgress
     );
 
+    const currentShiftY = interpolate(
+        shiftPositionsY[sectionIndex],
+        shiftPositionsY[sectionIndex + 1] ?? shiftPositionsY[sectionIndex],
+        sectionProgress
+    );
+
+    const currentScale = interpolate(
+        shiftScale[sectionIndex],
+        shiftScale[sectionIndex + 1] ?? shiftScale[sectionIndex],
+        sectionProgress
+    );
+
     const currentOrbit = cameraOrbits[sectionIndex].map((val, i) =>
         interpolate(val, cameraOrbits[sectionIndex + 1]?.[i] ?? val, sectionProgress)
     );
     
-    model.style.transform = `translateX(${currentShift}%)`;
+    model.style.transform = `translateX(${currentShift}%) translateY(${currentShiftY}%) scale(${currentScale})`;
     model.setAttribute("camera-orbit", `${currentOrbit[0]}deg ${currentOrbit[1]}deg`);
 });
 

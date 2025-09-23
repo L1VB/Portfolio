@@ -65,7 +65,7 @@ main.landing .container section.arrow-down{
     justify-content: center;
     align-items: center;
 }
-main.landing .container section.arrow-down p:last-of-type{
+main.landing .container section.arrow-down a#intro-1:last-of-type{
     font-size: 2.5rem;
     line-height: 0;
     padding: 0 0 .5em;
@@ -81,11 +81,6 @@ main.intro{
     display: flex;
     flex-direction: column;
     justify-content: end;
-
-    background-color: rgba(0, 255, 255, 0.134);
-}
-main.intro:nth-of-type(3){
-    background-color: rgba(102, 255, 0, 0.134);
 }
 main.intro .container .controls{
     display: flex;
