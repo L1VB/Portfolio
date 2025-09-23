@@ -1,4 +1,3 @@
-/* root */
 :root{
     --black: #231632;
     --white: #E8E0DE;
@@ -19,6 +18,35 @@
     --main-h: 60vh;
 
     --transi-am: 500ms ease;
+}
+
+.img-arrow{
+    padding: .1em 0;
+    width: 2.5em;
+    height: 2.5em;
+    border: 2px var(--white) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5em;
+}
+.img-arrow-LR{
+    padding: .1em .5em;
+    width: 2.5em;
+    height: 2.5em;
+    border: 2px var(--white) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5em;
+}
+.img-arrow img{
+    width: 50%;
+    height: auto;
+}
+.img-arrow-LR img{
+    width: auto;
+    height: 50%;
 }
 
 /* nav */
@@ -88,11 +116,6 @@ main.landing .container section.arrow-down{
     justify-content: center;
     align-items: center;
 }
-main.landing .container section.arrow-down a:last-of-type{
-    font-size: 2.5rem;
-    line-height: 0;
-    padding: 0;
-}
 
 /* intro */
 main.intro{
@@ -113,17 +136,6 @@ main.intro .container .controls{
     gap: 1em;
     padding: 0 0 2em;
 }
-main.intro .container .buttons{
-    width: 2.5em;
-    height: 2.5em;
-    border: 3px var(--white) solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5em;
-    color: var(--white);
-    font-weight: var(--h-weight-xb);
-}
 main.intro .container .text h3.title-2{
     padding: 0 0 5px;
 }
@@ -140,12 +152,11 @@ main.intro .portfolio{
 }
 main.intro .portfolio .content{
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     width: 50%;
     height: 40%;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -153,7 +164,9 @@ main.intro .portfolio .content{
 }
 main.intro .portfolio .content .top,
 main.intro .portfolio .content .bottom{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
 }
 
 /* 3D model */
@@ -187,7 +200,7 @@ footer .container hr{
 }
 footer .container section.top .content{
     width: 100%;
-    height: 30dvh;
+    height: 20dvh;
 }
 footer .container section.page-links .content,
 footer .container section.social-media .content{
@@ -195,7 +208,7 @@ footer .container section.social-media .content{
     height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: .5em;
+    gap: 1em;
     padding: 1em 0;
 }
 footer .container section.social-media .content{
@@ -204,6 +217,11 @@ footer .container section.social-media .content{
 footer .container section.page-links .content .text a,
 footer .container section.social-media .text a{
     color: var(--black);
+}
+footer .container section.page-links .content .text,
+footer .container section.social-media .text{
+    display: flex;
+    justify-content: space-between;
 }
 footer .container section.page-links .content .break,
 footer .container section.social-media .content .break{

@@ -1,10 +1,10 @@
 // MODEL
 const model = document.getElementById("model");
-const sections = Array.from(document.querySelectorAll("main", "footer"));
+const sections = Array.from(document.querySelectorAll("main, footer"));
 
-const shiftPositions = [0, 0, 0, 15];
-const shiftPositionsY = [0, -5, -15, 15];
-const shiftScale = [1, 1.25, 0.8, 0.1];
+const shiftPositions = [0, 0, 0, -5];
+const shiftPositionsY = [0, -5, -23, -15];
+const shiftScale = [1, 1.25, 0.8, 0.5];
 const cameraOrbits = [[45, 45], [-180, 90], [90, 0], [0, 90]];
 
 const sectionOffsets = sections.map(section => section.offsetTop);
@@ -57,7 +57,7 @@ const updateModel = (scrollY) => {
 let isScrolling = false;
 let scrollTimeout;
 let currentSectionIndex = 0;
-const scrollThreshold = 50;
+const scrollThreshold = 30;
 
 const getCurrentSectionIndex = scrollY => {
     for (let i = 0; i < sections.length; i++) {
@@ -86,7 +86,7 @@ const snapToSection = (targetIndex) => {
     
     setTimeout(() => {
         isScrolling = false;
-    }, 800);
+    }, 1200);
 };
 
 let lastScrollY = window.scrollY;
@@ -114,7 +114,7 @@ window.addEventListener("scroll", () => {
             const targetIndex = currentSectionIndex + scrollDirection;
             snapToSection(targetIndex);
         }
-    }, 100);
+    }, 150);
 });
 
 let wheelTimeout;
@@ -135,21 +135,9 @@ window.addEventListener("wheel", (e) => {
         if (Math.abs(delta) > 10 && targetIndex !== currentSectionIndex) {
             snapToSection(targetIndex);
         }
-    }, 50);
+    }, 100);
 }, { passive: false });
 
 window.addEventListener("load", () => {
     currentSectionIndex = getCurrentSectionIndex(window.scrollY);
-});
-
-// NAV TOGGLE
-const hamMenu = document.querySelector('nav');
-const icon = document.querySelector('.icon');
-const offScreenMenu = document.querySelector('.navOpen');
-const header = document.querySelector('header');
-
-hamMenu.addEventListener('click', () => {
-    icon.classList.toggle('active');
-    offScreenMenu.classList.toggle('active');
-    header.classList.toggle('active');
 });
