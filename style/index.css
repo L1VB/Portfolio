@@ -201,8 +201,9 @@ footer .container{
 footer .container hr{
     background-color: var(--black);
 }
-footer .container section.top .content{
+footer .container section.top{
     width: 100%;
+    height: 3em;
 }
 footer .container section.social-media .content{
     padding: 1em 0 3em;
@@ -269,7 +270,7 @@ footer .container section.bottom .button{
     width: fit-content;
     gap: .5em;
 }
-footer .container section.bottom .button a{
+footer .container section.bottom .button p{
     color: var(--black);
     text-align: center;
 }

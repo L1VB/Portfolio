@@ -3,7 +3,7 @@ const model = document.getElementById("model");
 const sections = Array.from(document.querySelectorAll("main, footer"));
 
 const shiftPositions = [0, 0, 0, -5];
-const shiftPositionsY = [0, -5, -23, 50];
+const shiftPositionsY = [0, -5, -23, 30];
 const shiftScale = [1, 1.25, 0.8, 0.5];
 const cameraOrbits = [[45, 45], [-180, 90], [90, 0], [0, 90]];
 
