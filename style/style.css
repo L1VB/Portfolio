@@ -13,7 +13,7 @@ html{
 body{
     margin: 0;
     padding: 0;
-    color: var(--white);
+    color: var(--black);
     font-family: var(--font-basic);
     width: 100vw;
     height: 100vh;
@@ -163,26 +163,15 @@ header .container{
     justify-content: center;
     align-items: center; 
 }
+header .container a{
+    color: var(--black);
+}
 header .container hr{
     flex: 1;
     height: 1px;
     border: none;
     margin: 0 20px;
-}
-
-header.active{
-    z-index: 101;
-}
-header.active .container{
-    z-index: 101;
-}
-header.active .container a .subH {
-    color: var(--white) !important;
-    z-index: 101; 
-}
-header.active .container hr{
-    background-color: var(--white);
-    z-index: 100;
+    background-color: var(--black);
 }
 
 /* nav */
@@ -321,4 +310,99 @@ body.nav-open {
 .arrow{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+/* footer */
+footer{
+    width: 100dvw;
+    height: 100%;
+    z-index: 100;
+    position: relative;
+    padding: 3em 0;
+    color: var(--black);
+}
+footer .container{
+    padding: 1em 20px 2em;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+}
+footer .container hr{
+    background-color: var(--black);
+}
+footer .container section.top{
+    width: 100%;
+    height: 3em;
+}
+footer .container section.social-media .content{
+    padding: 1em 0 3em;
+}
+footer .container section.page-links .content,
+footer .container section.social-media .content{
+    width: 100%;
+    height: fit-content;
+    padding: 1em 0;
+}
+footer .container section.page-links .content .text a,
+footer .container section.social-media .text a{
+    color: var(--black);
+}
+footer .container section.page-links .content .text,
+footer .container section.social-media .text{
+    border-left: 1px var(--black) solid;
+    padding: .5em 1em;
+    gap: .75em;
+    display: flex;
+    flex-direction: column;
+}
+footer .container section.page-links .content .text .row,
+footer .container section.social-media .text .row{
+    display: flex;
+    justify-content: space-between;
+}
+footer .container section.page-links .content .break,
+footer .container section.social-media .content .break{
+    width: 100%;
+    height: 100%;
+    padding: 0 0 .25em;
+    margin: 0;
+    position: relative;
+}
+
+footer .container section.bottom{
+    display: flex;
+    flex-direction: column;
+    height: 20dvh;
+    justify-content: space-between;
+    padding: 3em 0 0;
+}
+footer .container section.bottom .details{
+    display: flex;
+    justify-content: space-between;
+}
+footer .container section.bottom .buttons{
+    width: 2.5em;
+    height: 2.5em;
+    border: 3px var(--black) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5em;
+    color: var(--black);
+    font-weight: var(--h-weight-xb);
+}
+footer .container section.bottom .button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    gap: .5em;
+}
+footer .container section.bottom .button p{
+    color: var(--black);
+    text-align: center;
+}
+footer .container section.bottom .button .img-arrow{
+    border: 2px var(--black) solid;
 }
