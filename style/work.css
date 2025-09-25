@@ -1,3 +1,30 @@
+/* root */
+:root{
+    --black: #231632;
+    --white: #E8E0DE;
+    --bright: #6017AE;
+    --background: #F2DAB4;
+
+    --font: "Sansita", sans-serif;
+    --font-basic: "Archivo", sans-serif;
+    --l-space: 3%;
+    --l-space-2: 1px;
+    --h-weight-r: 400;
+    --h-weight-b: 700;
+    --h-weight-xb: 800;
+    --h-weight-bl: 900;
+    --f-s-title: 3rem;
+    --f-s-regular: 1rem;
+    --f-s-small: .75rem;
+    --f-s-ex-small: .55rem;
+    --f-s-medium: 1.5rem;
+
+    --main-h: 60dvh;
+
+    --transi-am: 500ms ease;
+}
+
+/* content */
 main.landing{
     padding: 50px 20px;
     position: relative;

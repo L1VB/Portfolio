@@ -1,0 +1,91 @@
+/* root */
+:root{
+    --black: #231632;
+    --white: #E8E0DE;
+    --bright: #6017AE;
+    --background: #F2DAB4;
+
+    --font: "Sansita", sans-serif;
+    --font-basic: "Archivo", sans-serif;
+    --l-space: 3%;
+    --l-space-2: 1px;
+    --h-weight-r: 400;
+    --h-weight-b: 700;
+    --h-weight-xb: 800;
+    --h-weight-bl: 900;
+    --f-s-title: 3rem;
+    --f-s-regular: 1rem;
+    --f-s-small: .75rem;
+    --f-s-ex-small: .55rem;
+    --f-s-medium: 1.5rem;
+
+    --main-h: 60dvh;
+
+    --transi-am: 500ms ease;
+}
+
+/* content */
+
+main.filter-content{
+    min-height: 100dvh;
+}
+main.filter-content .container{
+    position: relative;
+    max-width: 1350px;
+    width: 100%;
+    padding: 50px 20px;
+}
+
+main.filter-content .container .filter-buttons{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5em;
+}
+main.filter-content .container button{
+    padding: .5em .75em;
+    background: var(--white);
+    color: var(--bright);
+    border: 2px var(--bright) solid;
+    cursor: pointer;
+    border-radius: 5em;
+}
+main.filter-content .container button.active{
+    background: var(--bright);
+    color: var(--white);
+    border: 2px var(--bright) solid;
+}
+
+main.filter-content .container .filterable-cards{
+    display: flex;
+    padding: 1em 0 0;
+    gap: .5em;
+    flex-wrap: wrap;
+}
+main.filter-content .container .filterable-cards .card{
+    flex-basis: 300px;
+    background-color: var(--black);
+    color: var(--white);
+    padding: .5em;
+    border-radius: .75em;
+    flex-grow: 1;
+}
+main.filter-content .container .filterable-cards .card.hide{
+    display: none;
+}
+main.filter-content .container .filterable-cards .card img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: .5em .5em 0 0;
+}
+main.filter-content .container .filterable-cards .card .card-body{
+    padding: .5em 10px .75em;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+main.filter-content .container .filterable-cards .card .card-body .tags{
+    display: flex;
+    gap: .5em;
+}
