@@ -15,9 +15,9 @@ body{
     padding: 0;
     color: var(--black);
     font-family: var(--font-basic);
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--white);
+    width: 100dvw;
+    height: 100dvh;
+    background-color: var(--background);
 }
 
 hr{
@@ -31,6 +31,7 @@ hr{
     --black: #231632;
     --white: #E8E0DE;
     --bright: #6017AE;
+    --background: #F2DAB4;
 
     --font: "Sansita", sans-serif;
     --font-basic: "Archivo", sans-serif;
@@ -44,19 +45,19 @@ hr{
     --f-s-small: .75rem;
     --f-s-medium: 1.5rem;
 
-    --main-h: 60vh;
+    --main-h: 60dvh;
 
     --transi-am: 500ms ease;
 }
 
 @media (min-width: 480px) {
     :root {
-        --main-h: 62vh;
+        --main-h: 62dvh;
     }
 }
 @media (min-width: 998px) {
     :root {
-        --main-h: 64vh;
+        --main-h: 64dvh;
     }
 }
 
@@ -186,7 +187,7 @@ nav{
     padding: 0;
 }
 nav .container{
-    width: 40vw;
+    width: 40dvw;
     max-width: 700px;
     min-height: fit-content;
     height: auto;
@@ -249,12 +250,12 @@ nav .container .icon.active span:nth-child(3){
 
 /* navOpen */
 .navOpen{
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     background-color: var(--purple);
     z-index: 50;
     position: fixed;
-    bottom: -150vh;
+    bottom: -150dvh;
     left: 0;
     transition: var(--transi-am);
     overflow: hidden;
@@ -303,7 +304,7 @@ nav .container .icon.active span:nth-child(3){
 
 body.nav-open {
     overflow: hidden;
-    height: 100vh;
+    height: 100dvh;
 }
 
 /* arrow */
@@ -314,7 +315,7 @@ body.nav-open {
 
 /* footer */
 footer{
-    width: 100dvw;
+    width: 100ddvw;
     height: 100%;
     z-index: 100;
     position: relative;

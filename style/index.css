@@ -101,12 +101,12 @@ main.landing .container section.hero .text aside{
     display: flex;
     justify-content: end;
     align-items: center;
-    width: calc(100vw - 40px);
+    width: calc(100dvw - 40px);
     gap: .75em;
     padding: 0 0 1.5em;
 }
 main.landing .container section.arrow-down{
-    width: calc(100vw - 40px);
+    width: calc(100dvw - 40px);
     display: flex;
     flex-direction: column;
     justify-content: center;
