@@ -2,10 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 
-html{
-    scroll-behavior: smooth;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -168,6 +164,7 @@ header{
     z-index: 101;
     width: 100%;
     position: fixed;
+    padding: 0 20px;
 }
 header .container{
     width: 100%;

@@ -62,7 +62,6 @@ nav{
 /* background */
 .background{
     position: fixed;
-    overflow-y: scroll;
     top: 0;
     left: 0;
     width: 100dvw;
@@ -81,7 +80,7 @@ main.landing{
     position: relative;
     z-index: 1;
     height: 100dvh;
-    width: 100%;
+    width: 100dvw;
     padding: 0 20px;
     color: var(--black);
 }
@@ -179,6 +178,5 @@ main.intro .portfolio .content .bottom{
     height: 100%;
     pointer-events: none;
     z-index: 70;
-    transition: transform 1s ease-out;
     margin: 110px 0 0;
 }
