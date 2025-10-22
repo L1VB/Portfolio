@@ -24,10 +24,10 @@ hr{
 
 /* root */
 :root{
-    --black: #231632;
-    --white: #E8E0DE;
-    --bright: #6017AE;
-    --background: #F2DAB4;
+    --black: #16321f;
+    --white: #dee4e8;
+    --bright: #17ae51;
+    --background: #b4d4f2;
 
     --font: "Sansita", sans-serif;
     --font-basic: "Archivo", sans-serif;

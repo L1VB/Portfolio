@@ -1,9 +1,9 @@
 /* root */
 :root{
-    --black: #231632;
-    --white: #E8E0DE;
-    --bright: #6017AE;
-    --background: #F2DAB4;
+    --black: #16321f;
+    --white: #dee4e8;
+    --bright: #17ae51;
+    --background: #b4d4f2;
 
     --font: "Sansita", sans-serif;
     --font-basic: "Archivo", sans-serif;
@@ -24,21 +24,13 @@
     --transi-am: 500ms ease;
 }
 
-.img-arrow{
+.img-arrow,
+.img-arrow-LR{
     padding: .1em 0;
     width: 2.5em;
     height: 2.5em;
-    border: 2px var(--white) solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5em;
-}
-.img-arrow-LR{
-    padding: .1em .5em;
-    width: 2.5em;
-    height: 2.5em;
-    border: 2px var(--white) solid;
+    border: 2px var(--black) solid;
+    background: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +58,8 @@ nav{
     left: 0;
     width: 100dvw;
     height: 100dvh;
-    background-image: url('https://media.cntraveler.com/photos/5eb18e42fc043ed5d9779733/1:1/w_2866,h_2866,c_limit/BlackForest-Germany-GettyImages-147180370.jpg');
+    background-color: linear-gradient(#16321f, #16321f00);
+    background-image: url(/image/new-background.jpeg);
     background-position: center;
     background-size: cover;
 }
