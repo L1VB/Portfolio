@@ -1,9 +1,9 @@
 /* root */
 :root{
-    --black: #16321f;
+    --black: #171632;
     --white: #dee4e8;
-    --bright: #17ae51;
-    --background: #b4d4f2;
+    --bright: #0cb3dc;
+    --background: #bbbe89dd;
 
     --font: "Sansita", sans-serif;
     --font-basic: "Archivo", sans-serif;

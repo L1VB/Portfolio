@@ -19,15 +19,15 @@ body{
 hr{
     height: 1px;
     border: none;
-    background-color: var(--white);
+    background-color: var(--black);
 }
 
 /* root */
 :root{
-    --black: #16321f;
+    --black: #171632;
     --white: #dee4e8;
-    --bright: #17ae51;
-    --background: #b4d4f2;
+    --bright: #0cb3dc;
+    --background: #bbbe89dd;
 
     --font: "Sansita", sans-serif;
     --font-basic: "Archivo", sans-serif;
@@ -68,10 +68,11 @@ hr{
     font-family: 'Playball', serif !important;
     line-height: 1;
 }
-h1, h2, h3, h4, h5, h6, p{
+h1, h2, h3, h4, h5, h6, p, a{
     margin: 0;
     padding: 0;
     line-height: normal;
+    color: inherit;
 }
 .title{
     font-family: var(--font);
@@ -98,6 +99,7 @@ h1, h2, h3, h4, h5, h6, p{
     flex-shrink: 0;
     font-size: var(--f-s-medium);
 }
+
 .subH{
     font-family: var(--font);
     text-transform: uppercase;
@@ -108,7 +110,7 @@ h1, h2, h3, h4, h5, h6, p{
     flex-shrink: 0;
 }
 .subH-2{
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
     font-size: var(--f-s-small);
@@ -125,12 +127,24 @@ h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     flex-shrink: 0;
 }
+.subH-4{
+    text-transform: capitalize;
+    letter-spacing: var(--l-space-2);
+    font-weight: var(--h-weight-r);
+    font-size: var(--f-s-regular);
+    word-spacing: .1rem;
+    margin: 0;
+    flex-shrink: 0;
+    font-family: var(--font);
+}
+
 .reg{
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
     margin: 0;
     flex-shrink: 0;
     font-size: var(--f-s-regular);
+    color: inherit;
 }
 .des{
     letter-spacing: var(--l-space);

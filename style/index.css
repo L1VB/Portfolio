@@ -1,9 +1,9 @@
 /* root */
 :root{
-    --black: #16321f;
+    --black: #171632;
     --white: #dee4e8;
-    --bright: #17ae51;
-    --background: #b4d4f2;
+    --bright: #0cb3dc;
+    --background: #bbbe89dd;
 
     --font: "Sansita", sans-serif;
     --font-basic: "Archivo", sans-serif;
@@ -26,7 +26,6 @@
 
 .img-arrow,
 .img-arrow-LR{
-    padding: .1em 0;
     width: 2.5em;
     height: 2.5em;
     border: 2px var(--black) solid;
@@ -36,13 +35,22 @@
     align-items: center;
     border-radius: 5em;
 }
+.img-arrow{
+    padding: .1em 0 0;
+}
+.img-arrow-LR{
+    padding: 0 .1em 0 0;
+}
+.img-arrow-LR:nth-of-type(even){
+    padding: 0 10em 0 0;
+}
 .img-arrow img{
-    width: 50%;
+    width: 100%;
     height: auto;
 }
 .img-arrow-LR img{
     width: auto;
-    height: 50%;
+    height: 100%;
 }
 
 /* nav */
@@ -52,20 +60,29 @@ nav{
 }
 
 /* background */
+.background-colour{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background: linear-gradient(#16321f00, var(--background));
+    z-index: -20;
+}
 .background{
     position: fixed;
     top: 0;
     left: 0;
     width: 100dvw;
     height: 100dvh;
-    background-color: linear-gradient(#16321f, #16321f00);
     background-image: url(/image/new-background.jpeg);
     background-position: center;
     background-size: cover;
+    z-index: -30;
 }
 
 main{
-    color: var(--white);
+    color: var(--black);
 }
 
 /* main */
@@ -101,6 +118,15 @@ main.landing .container section.hero .text aside{
     gap: .75em;
     padding: 0 0 1.5em;
 }
+main.landing .container .hero .banner{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    color: var(--black);
+}
+main.landing .container .hero .banner .subH-4 a{
+    color: var(--white);
+}
 main.landing .container section.arrow-down{
     width: calc(100dvw - 40px);
     display: flex;
@@ -133,7 +159,7 @@ main.intro .container .text h3.title-2{
 }
 main.intro .container .text p.des{
     padding: .5em 1em;
-    border-left: 1px var(--white) solid;
+    border-left: 1px var(--black) solid;
     height: fit-content;
 }
 
@@ -144,6 +170,7 @@ main.intro .portfolio{
 }
 main.intro .portfolio .content{
     position: absolute;
+    color: var(--black);
     top: 20%;
     left: 50%;
     transform: translate(-50%);
