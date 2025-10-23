@@ -37,11 +37,13 @@ hr{
     --h-weight-b: 700;
     --h-weight-xb: 800;
     --h-weight-bl: 900;
-    --f-s-title: 3rem;
-    --f-s-regular: 1rem;
-    --f-s-small: .75rem;
-    --f-s-ex-small: .55rem;
-    --f-s-medium: 1.5rem;
+
+    --fs-num: 4rem;
+    --fs-title: 3rem;
+    --fs-title-2: 2rem;
+    --fs-subH: 1.75rem;
+    --fs-subH-2: 1rem;
+    --fs-BT: 1.2rem;
 
     --main-h: 60dvh;
 
@@ -80,7 +82,7 @@ h1, h2, h3, h4, h5, h6, p, a{
     font-weight: var(--h-weight-b);
     margin: 0;
     flex-shrink: 0;
-    font-size: var(--f-s-title);
+    font-size: var(--fs-title);
 }
 .title-2{
     font-family: var(--font);
@@ -88,16 +90,7 @@ h1, h2, h3, h4, h5, h6, p, a{
     font-weight: var(--h-weight-b);
     margin: 0;
     flex-shrink: 0;
-    font-size: var(--f-s-medium);
-}
-.title-3{
-    text-transform: uppercase;
-    font-family: var(--font);
-    letter-spacing: var(--l-space);
-    font-weight: var(--h-weight-b);
-    margin: 0;
-    flex-shrink: 0;
-    font-size: var(--f-s-medium);
+    font-size: var(--fs-subH);
 }
 
 .subH{
@@ -108,34 +101,24 @@ h1, h2, h3, h4, h5, h6, p, a{
     word-spacing: .1rem;
     margin: 0;
     flex-shrink: 0;
+    font-size: var(--fs-subH);
 }
 .subH-2{
     text-transform: capitalize;
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
-    font-size: var(--f-s-small);
+    font-size: var(--fs-subH-2);
     word-spacing: .1rem;
     margin: 0;
     flex-shrink: 0;
 }
 .subH-3{
-    text-transform: uppercase;
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-b);
-    font-size: var(--f-s-small);
+    font-size: var(--fs-BT);
     word-spacing: .1rem;
     margin: 0;
     flex-shrink: 0;
-}
-.subH-4{
-    text-transform: capitalize;
-    letter-spacing: var(--l-space-2);
-    font-weight: var(--h-weight-r);
-    font-size: var(--f-s-regular);
-    word-spacing: .1rem;
-    margin: 0;
-    flex-shrink: 0;
-    font-family: var(--font);
 }
 
 .reg{
@@ -143,7 +126,7 @@ h1, h2, h3, h4, h5, h6, p, a{
     font-weight: var(--h-weight-r);
     margin: 0;
     flex-shrink: 0;
-    font-size: var(--f-s-regular);
+    font-size: var(--fs-BT);
     color: inherit;
 }
 .des{
@@ -151,7 +134,7 @@ h1, h2, h3, h4, h5, h6, p, a{
     font-weight: var(--h-weight-r);
     margin: 0;
     flex-shrink: 0;
-    font-size: var(--f-s-small);
+    font-size: var(--fs-subH-2);
 }
 .tag{
     letter-spacing: var(--l-space-2);
@@ -168,7 +151,7 @@ h1, h2, h3, h4, h5, h6, p, a{
 }
 a{
     text-decoration: none;
-    color: var(--white);
+    color: inherit;
 }
 
 /* content */
@@ -218,18 +201,18 @@ nav.list .container{
 
 /* footer */
 footer{
-    width: 100ddvw;
+    width: 100dvw;
     height: 100%;
     z-index: 100;
     position: relative;
     padding: 3em 0;
     color: var(--black);
+    background-color: var(--white);
 }
 footer .container{
     padding: 1em 20px 2em;
     width: 100%;
     height: 100%;
-    background-color: var(--white);
 }
 footer .container hr{
     background-color: var(--black);
@@ -310,3 +293,67 @@ footer .container section.bottom .button p{
 footer .container section.bottom .button .img-arrow{
     border: 2px var(--black) solid;
 }
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    :root{
+        --fs-num: 4rem;
+        --fs-title: 3rem;
+        --fs-title-2: 2rem;
+        --fs-subH: 1.75rem;
+        --fs-subH-2: 1rem;
+        --fs-BT: 1.2rem;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    :root{
+        --fs-title: 4rem;
+        --fs-title-2: 1.5rem;
+        --fs-subH: 1rem;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    :root{
+        --l-space: 3%;
+        --l-space-2: 1px;
+
+        --h-weight-r: 400;
+        --h-weight-b: 700;
+        --h-weight-xb: 800;
+        --h-weight-bl: 900;
+
+        --fs-num: 4rem;
+        --fs-title: 3rem;
+        --fs-title-2: 2rem;
+        --fs-subH: 1.75rem;
+        --fs-subH-2: 1rem;
+        --fs-BT: 1.2rem;
+    }
+
+    footer .container{
+        padding: 1em 0 2em;
+        margin: 0 auto;
+        width: 80%;
+        height: 100%;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    :root{
+        --fs-title-2: 2rem;
+        --fs-BT: 1.4rem;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
