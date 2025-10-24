@@ -122,7 +122,7 @@ main.index{
     height: 27dvh;
 }
 .filterable-cards details .opened .mockup#video{
-    width: 100%;
+    width: calc(100dvw - 40px);
     height: auto;
 }
 .filterable-cards details .opened video,
