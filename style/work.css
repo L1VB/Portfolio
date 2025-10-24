@@ -13,11 +13,13 @@
     --h-weight-b: 700;
     --h-weight-xb: 800;
     --h-weight-bl: 900;
-    --f-s-title: 3rem;
-    --f-s-regular: 1rem;
-    --f-s-small: .75rem;
-    --f-s-ex-small: .55rem;
-    --f-s-medium: 1.5rem;
+    
+    --fs-num: 4rem;
+    --fs-title: 3rem;
+    --fs-title-2: 2rem;
+    --fs-subH: 1.75rem;
+    --fs-subH-2: 1rem;
+    --fs-BT: 1.2rem;
 
     --main-h: 60dvh;
 
@@ -28,4 +30,41 @@
 main.landing{
     padding: 50px 20px;
     position: relative;
+}
+
+/* cards */
+main.index{
+    padding: 0 20px;
+    max-width: 100dvw;
+}
+
+.filterable-cards details summary{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+.filterable-cards details summary .des{
+    grid-column: 1;
+    grid-row: 1;
+}
+.filterable-cards details summary .about{
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    align-items: end;
+}
+.filterable-cards details .opened{
+    width: calc(100dvw - 40px);
+    height: auto;
+}
+.filterable-cards details .opened img{
+    width: 100%;
+    height: auto;
+}
+
+/* filter */
+main .container .filterable-cards .card.hide{
+    display: none;
 }
