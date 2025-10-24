@@ -1,3 +1,11 @@
+:root{
+    --bright: #065569;
+}
+
+main.landing .container .title-2{
+    color: var(--bright);
+}
+
 main.landing{
     padding: 50px 20px;
     position: relative;

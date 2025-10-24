@@ -2,7 +2,8 @@
 :root{
     --black: #171632;
     --white: #dee4e8;
-    --bright: #0cb3dc;
+    --bright: #065569;
+    --new: #86cadb;
     --background: #bbbe89dd;
 
     --font: "Sansita", sans-serif;
@@ -33,10 +34,17 @@
     background: #bbbe8900;
 }
 
+.index{
+    margin: 0 0 3em;
+}
+
 /* content */
 main.landing{
     padding: 50px 20px;
     position: relative;
+}
+main.landing .container .text .title-2{
+    color: var(--bright);
 }
 main.landing .container .text{
     display: flex;
