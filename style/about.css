@@ -1,0 +1,11 @@
+main.landing{
+    padding: 50px 20px;
+    position: relative;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    padding: 2em 0 0;
+}

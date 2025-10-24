@@ -44,6 +44,15 @@ main.landing .container .text{
     align-items: end;
 }
 
+/* buttons */
+button{
+    border: 2px var(--black) solid;
+    border-radius: 2em;
+}
+button.active{
+    background-color: var(--bright);
+}
+
 /* cards */
 main.index{
     padding: 0 20px;
@@ -104,6 +113,11 @@ main.index{
     width: 100%;
     height: 27dvh;
 }
+.filterable-cards details .opened .mockup#video{
+    width: 100%;
+    height: auto;
+}
+.filterable-cards details .opened video,
 .filterable-cards details .opened img{
     width: 100%;
     height: 100%;
@@ -133,11 +147,24 @@ main .container .filterable-cards .card.hide{
     display: none;
 }
 
+.card-body{
+    padding: .5em 0 0;
+    display: none;
+}
 .card-body .text .content{
     display: flex;
     gap: .25em;
 }
 
+#wine{
+    color: var(--white);
+}
+
+.filter-buttons{
+    display: flex;
+    gap: .25em;
+    flex-wrap: wrap;
+}
 
 
 @media only screen and (min-width: 600px) {
