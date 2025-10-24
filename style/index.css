@@ -26,35 +26,6 @@
     --transi-am: 500ms ease;
 }
 
-.img-arrow,
-.img-arrow-LR{
-    width: 2.5em;
-    height: 2.5em;
-    border: 2px var(--black) solid;
-    background: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5em;
-}
-.img-arrow{
-    padding: .1em 0 0;
-}
-.img-arrow-LR{
-    padding: 0 .1em 0 0;
-}
-.img-arrow-LR:nth-of-type(even){
-    padding: 0 10em 0 0;
-}
-.img-arrow img{
-    width: 100%;
-    height: auto;
-}
-.img-arrow-LR img{
-    width: auto;
-    height: 100%;
-}
-
 /* nav */
 nav{
     position: relative;

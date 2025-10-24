@@ -94,14 +94,14 @@ h1, h2, h3, h4, h5, h6, p, a{
 }
 
 .subH{
-    font-family: var(--font);
-    text-transform: uppercase;
+    font-family: var(--font-basic);
+    text-transform: capitalize;
     letter-spacing: var(--l-space);
     font-weight: var(--h-weight-r);
     word-spacing: .1rem;
     margin: 0;
     flex-shrink: 0;
-    font-size: var(--fs-subH);
+    font-size: var(--fs-subH-2);
 }
 .subH-2{
     text-transform: capitalize;
@@ -292,6 +292,36 @@ footer .container section.bottom .button p{
 }
 footer .container section.bottom .button .img-arrow{
     border: 2px var(--black) solid;
+}
+
+/* arrows */
+.img-arrow,
+.img-arrow-LR{
+    width: 2.5em;
+    height: 2.5em;
+    border: 2px var(--black) solid;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5em;
+}
+.img-arrow{
+    padding: .1em 0 0;
+}
+.img-arrow-LR{
+    padding: 0 .1em 0 0;
+}
+.img-arrow-LR:nth-of-type(even){
+    padding: 0 10em 0 0;
+}
+.img-arrow img{
+    width: 100%;
+    height: auto;
+}
+.img-arrow-LR img{
+    width: auto;
+    height: 100%;
 }
 
 
