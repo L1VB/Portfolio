@@ -41,6 +41,10 @@ a:hover{
     color: var(--hover-C);
 }
 
+span{
+    color: var(--hover-C);
+}
+
 /* layout */
 :root{
     --light-BG: rgb(176, 194, 220);
@@ -163,4 +167,20 @@ footer .links a{
 }
 footer .links a:hover{
     color: var(--hover-C);
+}
+
+/* nav */
+section.hero nav.small{
+    grid-column: 1 / 8;
+    grid-row: 1;
+    margin: var(--gap-sm);
+}
+section.hero .nav-sm-content{
+    grid-column: 4 / 9;
+    grid-row: 1;
+    margin: var(--gap-sm);
+
+    justify-content: flex-end;
+    display: flex;
+    gap: 8px;
 }

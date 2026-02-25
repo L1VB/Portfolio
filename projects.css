@@ -4,20 +4,6 @@ section.hero{
     height: calc(100dvh - 32px);
     /* background-color: var(--light-BG); */
 }
-section.hero nav.small{
-    grid-column: 1 / 8;
-    grid-row: 1;
-    margin: var(--gap-sm);
-}
-section.hero .content{
-    grid-column: 4 / 9;
-    grid-row: 1;
-    margin: var(--gap-sm);
-
-    justify-content: flex-end;
-    display: flex;
-    gap: 8px;
-}
 
 /* filter-list */
 section.filter-list{
