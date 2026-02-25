@@ -1,8 +1,8 @@
 /* hero */
 section.hero{
     width: 100dvw;
-    height: calc(100dvh - 32px);
-    background-color: var(--light-BG);
+    height: var(--gap-lr);
+    /* background-color: var(--light-BG); */
 }
 
 /* filter-list */
@@ -67,7 +67,7 @@ section.filter-list .list .container{
     flex-direction: column;
 }
 section.filter-list .list .container .filterDiv{
-    border-top: 2px solid var(--bold-C);
+    border-top: 2px solid var(--black);
     padding: var(--gap-sm) 0;
     display: flex;
     justify-content: space-between;
