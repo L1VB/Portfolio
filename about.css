@@ -1,0 +1,21 @@
+/* hero */
+section.hero{
+    width: 100dvw;
+    height: calc(100dvh - 32px);
+    /* background-color: var(--light-BG); */
+}
+section.hero .profile{
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+
+    background-color: brown;
+}
+section.hero .text{
+    grid-column: 4 / 8;
+    grid-row: 2;
+    align-self: flex-end;
+}
+section.hero .body{
+    grid-column: 4 / 8;
+    grid-row: 3 / 4;
+}
