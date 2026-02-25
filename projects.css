@@ -101,9 +101,10 @@ button{
     padding: 0;
     border: 0;
     background: none;
+    color: var(--hover-C);
 }
 button:hover{
-    color: var(--hover-C);
+    cursor: pointer;
 }
 
 .container {
