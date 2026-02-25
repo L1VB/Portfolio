@@ -55,6 +55,7 @@ span{
 
     --gap-sm: 16px;
     --gap-md: 32px;
+    --gap-lr: 64px;
 }
 
 * {
