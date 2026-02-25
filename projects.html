@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liv Broughton / Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <section class="hero">
+        <nav class="small">
+            <a href="">
+                <h4 class="subtitle">Liv Broughton</h4>
+            </a>
+        </nav>
+        <div class="content">
+            <a href="projects.html">
+                <h4 class="subtitle"><span>Project</span></h4>
+            </a>
+            <h4 class="subtitle">/</h4>
+            <a href="about.html">
+                <h4 class="subtitle">About</h4>
+            </a>
+            <h4 class="subtitle">/</h4>
+            <a href="">
+                <h4 class="subtitle">Contact</h4>
+            </a>
+        </div>
+        <!--  -->
+    </section>
+
+    <!--  -->
+
+    <section class="filter-list">
+        <h2 class="title-page">All Projects</h4>
+        <h4 class="heading">Filters</h4>
+        <div class="controls">
+            <!-- Control buttons -->
+            <div id="myBtnContainer">
+                <button class="btn" onclick="filterSelection('all')">
+                    <p class="body-strong">
+                        [Show all]
+                    </p>
+                </button>
+                <button class="btn" onclick="filterSelection('web-design')">
+                    <p class="body-strong">
+                        [Web Design]
+                    </p>
+                </button>
+                <button class="btn" onclick="filterSelection('freelance')">
+                    <p class="body-strong">
+                        [Freelance]
+                    </p>
+                </button>
+            </div>
+        </div>
+        <div class="list">
+            <!-- Filterable elements -->
+            <div class="container">
+                <div class="filterDiv web-design">
+                    <div class="content">
+                        <div class="thumbnail">
+                            <img src="images/SM/mockup Small.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p class="heading">Project Name</p>
+                            <div class="des">
+                                <p class="body">[Tag]</p>
+                                <p class="body">Date</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="filterDiv freelance">
+                    <div class="content">
+                        <div class="thumbnail">
+                            <img src="images/SM/Y8-12 [Booklet] 2 Small.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p class="heading">Massey Highschool Booklets</p>
+                            <div class="des">
+                                <p class="body">[Freelance]</p>
+                                <p class="body">##/10/2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- more items... -->
+            </div>
+        </div>
+    </section>
+    
+    
+<!-- where filter should be -->
+
+
+
+    <!--  -->
+    <footer>
+        <div class="name">
+            <h1 class="title-hero">Liv Broughton</h1>
+        </div>
+        <div class="contact">
+            <div class="content">
+                <p class="heading">PHO: (64+) 27 397 1907</p>
+                <p class="heading">Email: liv.b872@gmail.com</p>
+            </div>
+        </div>
+        <div class="links">
+            <a href="index.html">
+                <h2 class="title-page">Home</h2>
+            </a>
+            <a href="projects.html">
+                <h2 class="title-page">Project</h2>
+            </a>
+            <a href="about.html">
+                <h2 class="title-page">About</h2>
+            </a>
+            <a href="contact.html">
+                <h2 class="title-page">Contact</h2>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+            function filterSelection(category) {
+        let elements = document.getElementsByClassName("filterDiv");
+        if (category === "all") category = "";
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = "none";
+            if (elements[i].className.indexOf(category) > -1) {
+            elements[i].style.display = "block";
+            }
+        }
+        }
+
+        filterSelection("all");
+    </script>
+</body>
+</html>

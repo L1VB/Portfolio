@@ -1,0 +1,103 @@
+/* hero */
+section.hero{
+    width: 100dvw;
+    height: calc(100dvh - 32px);
+    /* background-color: var(--light-BG); */
+}
+section.hero nav.small{
+    grid-column: 1 / 8;
+    grid-row: 1;
+    margin: var(--gap-sm);
+}
+section.hero .content{
+    grid-column: 4 / 9;
+    grid-row: 1;
+    margin: var(--gap-sm);
+
+    justify-content: flex-end;
+    display: flex;
+    gap: 8px;
+}
+
+/* filter-list */
+section.filter-list{
+    width: 100dvw;
+    min-height: calc(100dvh - 32px);
+    height: 100%;
+}
+section.filter-list .title-page{
+    grid-column: 2 / 5;
+    grid-row: 1;
+    margin-top: var(--gap-sm);
+}
+section.filter-list .heading{
+    grid-column: 2 / 5;
+    grid-row: 1;
+
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    gap: var(--gap-sm);
+}
+section.filter-list .controls{
+    grid-column: 3 / 8;
+    grid-row: 1;
+
+    align-self: flex-end;
+}
+#myBtnContainer{
+    display: flex;
+    gap: var(--gap-md);
+}
+
+section.filter-list .text{
+    align-self: flex-end;
+}
+section.filter-list .text .des{
+    display: flex;
+    gap: var(--gap-sm);
+}
+section.filter-list .list{
+    grid-column: 2 / 8;
+    grid-row: 2 / 5;
+}
+section.filter-list .list .container{
+    display: flex;
+    flex-direction: column;
+}
+section.filter-list .list .container .filterDiv{
+    border-top: 2px solid var(--bold-C);
+    padding: var(--gap-sm) 0;
+    display: flex;
+    justify-content: space-between;
+}
+section.filter-list .list .container .filterDiv .content{
+    display: flex;
+    gap: var(--gap-sm);
+}
+section.filter-list .list .container .filterDiv .content .thumbnail{
+    width: 10em;
+    height: fit-content;
+}
+section.filter-list .list .container .filterDiv .content .thumbnail img{
+    width: 100%;
+    height: 100%;
+    max-height: 6em;
+    overflow: hidden;
+    object-position: center;
+    object-fit: cover;
+}
+
+/* filter buttons */
+.filterDiv {
+    display: none; 
+}
+.show {
+    display: block;
+}
+
+button{
+    padding: 0;
+    border: 0;
+    background: none;
+}
