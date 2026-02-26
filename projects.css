@@ -167,6 +167,12 @@ button:hover{
         gap: var(--gap-sm);
     }
 
+    section.filter-list .title-text .tt-content,
+    .controls details,
+    section.filter-list .list .container{
+        grid-column: 1 / 9;
+    }
+
     section.filter-list .list .container .filterDiv .content .thumbnail{
         min-width: 40%;
     }
