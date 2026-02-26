@@ -144,6 +144,7 @@ section.filter-list .list .container .filterDiv .content .thumbnail.portrait{
     height: var(--landscape);
     width: calc(var(--landscape) / 1.5);
     min-width: fit-content;
+    flex-shrink: 0;
 }
 section.filter-list .list .container .filterDiv .content .thumbnail.portrait img{
     width: fit-content;
