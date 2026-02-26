@@ -61,6 +61,7 @@ span{
     --white: #eaeaea;
     --black: rgb(45, 45, 45);
 
+    --gap-xsm: 4px;
     --gap-sm: 16px;
     --gap-md: 32px;
     --gap-lr: 64px;
@@ -185,6 +186,7 @@ section.hero nav.small{
     grid-column: 1 / 8;
     grid-row: 1;
     margin: var(--gap-sm);
+    width: fit-content;
 }
 section.hero .nav-sm-content{
     grid-column: 4 / 9;
@@ -195,3 +197,50 @@ section.hero .nav-sm-content{
     display: flex;
     gap: 8px;
 }
+
+/* scaling */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .title-hero{
+        font-size: 1.75rem;
+    }
+    .title-page{
+        font-size: 1.5rem;
+    }
+    .subtitle{
+        font-size: 1rem;
+    }
+    .heading{
+        font-size: .8rem;
+    }
+    .body-strong{
+        font-size: .75rem;
+    }
+    .body{font-size: .65rem;
+    }
+
+    footer .links{
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    footer .links a{
+        max-width: fit-content;
+        padding: 0 20px;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

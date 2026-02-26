@@ -26,7 +26,7 @@ section.filter-list .controls{
     z-index: 1;
     margin-top: var(--gap-lr);
     display: flex;
-    align-items: center;
+    align-items: top;
     height: fit-content;
     width: fit-content;
     gap: var(--gap-lr);
@@ -45,7 +45,7 @@ section.filter-list .controls{
 } */
 #myBtnContainer{
     display: flex;
-    gap: var(--gap-md);
+    gap: var(--gap-xsm) var(--gap-md);
     flex-wrap: wrap;
 }
 
