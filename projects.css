@@ -79,6 +79,7 @@ section.filter-list .list .container .filterDiv .content{
 section.filter-list .list .container .filterDiv .content .thumbnail{
     width: 10em;
     height: fit-content;
+    max-height: 6em;
 }
 section.filter-list .list .container .filterDiv .content .thumbnail img{
     width: 100%;
@@ -109,4 +110,28 @@ button:hover{
 
 .container {
     overflow: hidden;
+}
+
+/* scaling */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    section.filter-list .list .container .filterDiv .content .thumbnail{
+        min-width: 40%;
+    }
+
+    section.filter-list .controls .control-buttons{
+        justify-content: space-between;
+    }
+    
+    section.filter-list .list .container .filterDiv .content{
+        flex-direction: row;
+    }
+    section.filter-list .list .container .filterDiv .content .text{
+        max-width: 40%;
+    }
+    section.filter-list .text .des{
+        display: flex;
+        gap: var(--gap-xsm) var(--gap-sm);
+        flex-wrap: wrap;
+    }
 }
