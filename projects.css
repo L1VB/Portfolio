@@ -10,17 +10,44 @@ section.filter-list{
     width: 100dvw;
     min-height: calc(100dvh - 32px);
     height: fit-content;
-    padding: 0 var(--gap-sm);
-
+    padding: 0 0;
+    
     display: flex;
     flex-direction: column;
-    gap: var(--gap-sm);
 }
 section.filter-list .title-text{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: var(--gap-sm);
+}
+/* section.filter-list .title-text{
     display: flex;
     justify-content: space-between;
     align-items: end;
     height: fit-content;
+
+    grid-column: 2 / 8;
+} */
+section.filter-list .controls{
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: var(--gap-sm);
+}
+section.filter-list .list{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: var(--gap-sm);
+}
+
+section.filter-list .title-text .tt-content{
+    grid-column: 2 / 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
 }
 
 section.filter-list details{
@@ -29,6 +56,7 @@ section.filter-list details{
     display: flex;
     gap: var(--gap-xsm);
     flex-direction: column;
+    grid-column: 2 / 8;
 }
 section.filter-list details summary{
     width: 100%;
@@ -46,10 +74,6 @@ details[open] > summary::before {
     transform: rotate(90deg);
 }
 
-section.filter-list .controls{
-    z-index: 1;
-}
-
 #myBtnContainer{
     display: flex;
     gap: var(--gap-xsm) var(--gap-md);
@@ -59,10 +83,11 @@ section.filter-list .controls{
 section.filter-list .list .container{
     display: flex;
     flex-direction: column;
+    grid-column: 2 / 8;
 }
 section.filter-list .list .container .filterDiv{
     border-top: 2px solid var(--black);
-    padding: var(--gap-sm) 0;
+    padding: var(--gap-xsm) 0 var(--gap-sm);
     display: flex;
     justify-content: space-between;
 }
@@ -80,7 +105,7 @@ section.filter-list .text .des{
     display: flex;
     gap: var(--gap-sm);
 }
-section.filter-list .list .container .filterDiv .content .thumbnail{
+/* section.filter-list .list .container .filterDiv .content .thumbnail{
     width: 10em;
     height: fit-content;
     max-height: 6em;
@@ -92,7 +117,7 @@ section.filter-list .list .container .filterDiv .content .thumbnail img{
     overflow: hidden;
     object-position: center;
     object-fit: cover;
-}
+} */
 
 /* filter buttons */
 .filterDiv {
@@ -119,6 +144,17 @@ button:hover{
 /* scaling */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    section.filter-list{
+        width: 100dvw;
+        min-height: calc(100dvh - 32px);
+        height: fit-content;
+        padding: 0 var(--gap-sm);
+    
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-sm);
+    }
+
     section.filter-list .list .container .filterDiv .content .thumbnail{
         min-width: 40%;
     }
