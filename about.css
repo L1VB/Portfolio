@@ -20,7 +20,37 @@ section.hero .body{
     grid-row: 3 / 4;
 }
 
+/* scaling */
+/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    section{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        column-gap: var(--gap-sm);
+        row-gap: var(--gap-sm);
+    }
+    /*  */
+    section.hero .profile{
+        grid-column: 2 / 6;
+        grid-row: 2 / 4;
+        max-height: calc(100% - var(--gap-lr));
+    
+        background-color: brown;
+    }
+    section.hero .text{
+        grid-column: 2 / 7;
+        grid-row: 3;
+        align-self: flex-end;
+    }
+    section.hero .body{
+        grid-column: 2 / 8;
+        grid-row: 4 / 5;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
     section{
         display: grid;
         grid-template-columns: repeat(8, 1fr);

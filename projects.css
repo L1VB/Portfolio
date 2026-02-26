@@ -9,59 +9,53 @@ section.hero{
 section.filter-list{
     width: 100dvw;
     min-height: calc(100dvh - 32px);
-    height: 100%;
+    height: fit-content;
+    padding: 0 var(--gap-sm);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
 }
 section.filter-list .title-text{
-    grid-column: 2 / 8;
-    grid-row: 1 / 5;
-    margin-top: var(--gap-sm);
     display: flex;
     justify-content: space-between;
     align-items: end;
     height: fit-content;
 }
-section.filter-list .controls{
-    grid-column: 2 / 8;
-    grid-row: 1;
-    z-index: 1;
-    margin-top: var(--gap-lr);
-    display: flex;
-    align-items: top;
-    height: fit-content;
-    width: fit-content;
-    gap: var(--gap-lr);
-}
-/* section.filter-list .controls{
-    grid-column: 2 / 8;
-    grid-row: 1;
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: fit-content;
+section.filter-list details{
+    width: 100%;
     height: fit-content;
-    gap: var(--gap-lr);
-    margin-top: var(--gap-lr);
-} */
+    display: flex;
+    gap: var(--gap-xsm);
+    flex-direction: column;
+}
+section.filter-list details summary{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    gap: var(--gap-xsm);
+}
+summary::before {
+    content: "▶";
+}
+section.filter-list details summary:hover{
+    cursor: pointer;
+}
+details[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+section.filter-list .controls{
+    z-index: 1;
+}
+
 #myBtnContainer{
     display: flex;
     gap: var(--gap-xsm) var(--gap-md);
     flex-wrap: wrap;
 }
 
-section.filter-list .list{
-    grid-column: 2 / 8;
-    grid-row: 1 / 6;
-    margin-top: var(--gap-lr);
-    padding: var(--gap-lr) 0;
-}
-section.filter-list .text{
-    align-self: flex-end;
-}
-section.filter-list .text .des{
-    display: flex;
-    gap: var(--gap-sm);
-}
 section.filter-list .list .container{
     display: flex;
     flex-direction: column;
@@ -73,6 +67,16 @@ section.filter-list .list .container .filterDiv{
     justify-content: space-between;
 }
 section.filter-list .list .container .filterDiv .content{
+    display: flex;
+    gap: var(--gap-sm);
+    width: 100%;
+}
+section.filter-list .text{
+    align-self: flex-end;
+    width: 100%;
+    max-width: calc(100% - 10em - var(--gap-sm));
+}
+section.filter-list .text .des{
     display: flex;
     gap: var(--gap-sm);
 }
@@ -127,7 +131,7 @@ button:hover{
         flex-direction: row;
     }
     section.filter-list .list .container .filterDiv .content .text{
-        max-width: 40%;
+        max-width: 100%;
     }
     section.filter-list .text .des{
         display: flex;

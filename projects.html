@@ -39,29 +39,37 @@
         </div>
         <div class="controls">
             <!-- Control buttons -->
-            <h4 class="heading">Filters:</h4>
-            <div class="control-buttons" id="myBtnContainer">
-                <button class="btn" onclick="filterSelection('all')">
-                    <p class="body-strong">
-                        [Show all]
-                    </p>
-                </button>
-                <button class="btn" onclick="filterSelection('freelance')">
-                    <p class="body-strong">
-                        [Freelance]
-                    </p>
-                </button>
-                <button class="btn" onclick="filterSelection('web-design')">
-                    <p class="body-strong">
-                        [Web Design]
-                    </p>
-                </button>
-                <button class="btn" onclick="filterSelection('figma')">
-                    <p class="body-strong">
-                        [Figma]
-                    </p>
-                </button>
-            </div>
+            
+            <!--  -->
+            <details>
+                <summary>
+                    <h4 class="heading">Filters:</h4>
+                </summary>
+                
+                <div class="control-buttons" id="myBtnContainer">
+                    <button class="btn" onclick="filterSelection('all')">
+                        <p class="body-strong">
+                            [Show all]
+                        </p>
+                    </button>
+                    <button class="btn" onclick="filterSelection('freelance')">
+                        <p class="body-strong">
+                            [Freelance]
+                        </p>
+                    </button>
+                    <button class="btn" onclick="filterSelection('web-design')">
+                        <p class="body-strong">
+                            [Web Design]
+                        </p>
+                    </button>
+                    <button class="btn" onclick="filterSelection('figma')">
+                        <p class="body-strong">
+                            [Figma]
+                        </p>
+                    </button>
+                </div>
+            </details>
+            
         </div>
         <div class="list">
             <!-- Filterable elements -->
