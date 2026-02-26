@@ -118,6 +118,9 @@ section.filter-list .text .des{
     gap: var(--gap-sm);
 }
 
+section.filter-list .list .container details a{
+    color: var(--hover-C);
+}
 section.filter-list .list .container details .list-details{
     display: flex;
     flex-direction: row;
