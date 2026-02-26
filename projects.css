@@ -121,7 +121,7 @@ section.filter-list .text .des{
 section.filter-list .list .container details .list-details{
     display: flex;
     flex-direction: row;
-    align-self: start;
+    align-self: flex-start;
     overflow-x: scroll;
     overflow-y: hidden;
     max-width: 100%;
