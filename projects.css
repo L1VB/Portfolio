@@ -122,13 +122,14 @@ section.filter-list .list .container details .list-details{
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
+    overflow-y: hidden;
     max-width: 100%;
     gap: var(--gap-xsm);
 }
 section.filter-list .list .container .filterDiv .content .thumbnail.landscape {
     height: var(--landscape);
-    width: auto;
-    min-width: var(--landscape);
+    width: calc(var(--landscape) / 1.5);
+    min-width: fit-content;
     flex-shrink: 0;
 }
 section.filter-list .list .container .filterDiv .content .thumbnail.landscape img{
@@ -141,13 +142,14 @@ section.filter-list .list .container .filterDiv .content .thumbnail.landscape im
 section.filter-list .list .container .filterDiv .content .thumbnail.portrait{
     height: var(--landscape);
     width: calc(var(--landscape) / 1.5);
+    min-width: fit-content;
 }
 section.filter-list .list .container .filterDiv .content .thumbnail.portrait img{
-    width: 100%;
+    width: fit-content;
     height: 100%;
     overflow: hidden;
     object-position: center;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* filter buttons */
