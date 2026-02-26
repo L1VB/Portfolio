@@ -127,32 +127,34 @@ section.filter-list .list .container details .list-details{
     max-width: 100%;
     gap: var(--gap-xsm);
 }
-section.filter-list .list .container .filterDiv .content .thumbnail.landscape {
+section.filter-list .list .container .filterDiv .content .thumbnail.landscape,
+section.filter-list .list .container .filterDiv .content .thumbnail.portrait {
     height: var(--landscape);
     width: calc(var(--landscape) / 1.5);
     min-width: fit-content;
     flex-shrink: 0;
 }
-section.filter-list .list .container .filterDiv .content .thumbnail.landscape img{
+section.filter-list .list .container .filterDiv .content .thumbnail.landscape img,
+section.filter-list .list .container .filterDiv .content .thumbnail.portrait img{
     width: auto;
     height: 100%;
     overflow: hidden;
     object-position: center;
     object-fit: cover;
 }
-section.filter-list .list .container .filterDiv .content .thumbnail.portrait{
+/* section.filter-list .list .container .filterDiv .content .thumbnail.portrait{
     height: var(--landscape);
     width: calc(var(--landscape) / 1.5);
     min-width: fit-content;
     flex-shrink: 0;
-}
-section.filter-list .list .container .filterDiv .content .thumbnail.portrait img{
-    width: fit-content;
+} */
+/* section.filter-list .list .container .filterDiv .content .thumbnail.portrait img{
+    width: a;
     height: 100%;
     overflow: hidden;
     object-position: center;
     object-fit: contain;
-}
+} */
 
 /* filter buttons */
 .filterDiv {
