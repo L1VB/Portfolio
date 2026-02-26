@@ -130,9 +130,10 @@ section.filter-list .list .container details .list-details{
 section.filter-list .list .container .filterDiv .content .thumbnail.landscape,
 section.filter-list .list .container .filterDiv .content .thumbnail.portrait {
     height: var(--landscape);
-    width: calc(var(--landscape) / 1.5);
     min-width: fit-content;
     flex-shrink: 0;
+
+    background-color: brown;
 }
 section.filter-list .list .container .filterDiv .content .thumbnail.landscape img,
 section.filter-list .list .container .filterDiv .content .thumbnail.portrait img{
