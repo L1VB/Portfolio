@@ -198,10 +198,6 @@ section.filter-list .list .container details .list-details a:hover{
         grid-column: 1 / 9;
     }
 
-    section.filter-list .list .container .filterDiv .content .thumbnail{
-        min-width: 40%;
-    }
-
     section.filter-list .controls .control-buttons{
         justify-content: space-between;
     }
