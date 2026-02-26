@@ -5,6 +5,7 @@ section.hero{
     /* background-color: var(--light-BG); */
 }
 
+
 /* filter-list */
 section.filter-list{
     width: 100dvw;
@@ -60,13 +61,13 @@ section.filter-list .title-text .tt-content{
     grid-column: 2 / 8;
 }
 .controls details summary{
-    width: 100%;
+    width: fit-content;
     height: fit-content;
     display: flex;
     gap: var(--gap-xsm);
 }
 .controls summary::before {
-    content: ">";
+    content: "▶";
 }
 .controls details summary:hover{
     cursor: pointer;
@@ -77,7 +78,7 @@ section.filter-list .title-text .tt-content{
 
 #myBtnContainer{
     display: flex;
-    gap: var(--gap-xsm) var(--gap-md);
+    gap: var(--gap-sm) var(--gap-md);
     flex-wrap: wrap;
 }
 
@@ -91,11 +92,16 @@ section.filter-list .list .container{
     flex-direction: column;
     grid-column: 2 / 8;
 }
+section.filter-list .list .container .filterDiv details{
+    color: var(--black);
+}
 section.filter-list .list .container .filterDiv{
     border-top: 2px solid var(--black);
     padding: var(--gap-xsm) 0 var(--gap-sm);
     display: flex;
     justify-content: space-between;
+
+    color: var(--light-BG);
 }
 section.filter-list .list .container .filterDiv .content{
     display: flex;
@@ -119,9 +125,13 @@ section.filter-list .list .container details .list-details{
     max-width: 100%;
     gap: var(--gap-xsm);
 }
-section.filter-list .list .container .filterDiv .content .thumbnail{
-    min-width: 20dvw;
-    height: fit-content;
+section.filter-list .list .container .filterDiv .content .thumbnail.landscape{
+    min-height: calc(var(--landscape) / 2);
+    min-width: var(--landscape);
+}
+section.filter-list .list .container .filterDiv .content .thumbnail.portrait{
+    min-height: var(--landscape);
+    min-width: calc(var(--landscape) / 1.5);
 }
 section.filter-list .list .container .filterDiv .content .thumbnail img{
     width: 100%;
@@ -182,7 +192,7 @@ button:hover{
     }
     
     section.filter-list .list .container .filterDiv .content{
-        flex-direction: row;
+        flex-direction: column;
     }
     section.filter-list .list .container .filterDiv .content .text{
         max-width: 100%;
