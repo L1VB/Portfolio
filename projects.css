@@ -118,6 +118,14 @@ section.filter-list .text .des{
     gap: var(--gap-sm);
 }
 
+section.filter-list aside a{
+    display: flex;
+    gap: var(--gap-xsm);
+}
+section.filter-list aside a:hover{
+    text-decoration: underline;
+}
+
 section.filter-list .list .container details a{
     color: var(--hover-C);
 }
