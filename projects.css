@@ -121,6 +121,7 @@ section.filter-list .text .des{
 section.filter-list .list .container details .list-details{
     display: flex;
     flex-direction: row;
+    align-self: start;
     overflow-x: scroll;
     overflow-y: hidden;
     max-width: 100%;
@@ -182,7 +183,7 @@ section.filter-list .list .container details .list-details a:hover{
     :root{
         --landscape: 25dvh;
     }
-    
+
     section.filter-list{
         padding: 0 var(--gap-sm);
         gap: var(--gap-sm);
