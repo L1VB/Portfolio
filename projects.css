@@ -9,7 +9,7 @@ section.hero{
 /* filter-list */
 section.filter-list{
     width: 100dvw;
-    min-height: calc(100dvh - 32px);
+    min-height: calc(100dvh - 97px);
     height: fit-content;
     padding: 0 0;
     
@@ -125,9 +125,11 @@ section.filter-list .list .container details .list-details{
     max-width: 100%;
     gap: var(--gap-xsm);
 }
-section.filter-list .list .container .filterDiv .content .thumbnail.landscape{
+section.filter-list .list .container .filterDiv .content .thumbnail.landscape {
     height: var(--landscape);
     width: auto;
+    min-width: var(--landscape);
+    flex-shrink: 0;
 }
 section.filter-list .list .container .filterDiv .content .thumbnail.landscape img{
     width: auto;
@@ -142,7 +144,7 @@ section.filter-list .list .container .filterDiv .content .thumbnail.portrait{
 }
 section.filter-list .list .container .filterDiv .content .thumbnail.portrait img{
     width: 100%;
-    height: auto;
+    height: 100%;
     overflow: hidden;
     object-position: center;
     object-fit: cover;
@@ -162,7 +164,9 @@ button{
     background: none;
     color: var(--hover-C);
 }
-button:hover{
+
+button:hover,
+section.filter-list .list .container details .list-details a:hover{
     cursor: pointer;
 }
 
@@ -174,13 +178,7 @@ button:hover{
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     section.filter-list{
-        width: 100dvw;
-        min-height: calc(100dvh - 32px);
-        height: fit-content;
         padding: 0 var(--gap-sm);
-    
-        display: flex;
-        flex-direction: column;
         gap: var(--gap-sm);
     }
 
