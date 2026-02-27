@@ -111,6 +111,9 @@ section.hero nav.large .content{
     display: flex;
     justify-content: space-between;
 }
+section.hero nav.large .content a{
+    text-decoration: underline;
+}
 section.hero .hero-img{
     width: 100%;
     height: calc(100% - 50px);
