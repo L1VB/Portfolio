@@ -193,12 +193,13 @@ section.hero nav.small{
     grid-row: 1;
     margin: var(--gap-sm);
     width: fit-content;
+    height: fit-content;
 }
 section.hero .nav-sm-content{
     grid-column: 4 / 9;
     grid-row: 1;
     margin: var(--gap-sm);
-
+    height: fit-content;
     justify-content: flex-end;
     display: flex;
     gap: 8px;
