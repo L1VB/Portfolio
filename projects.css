@@ -66,13 +66,18 @@ section.filter-list .title-text .tt-content{
     display: flex;
     gap: var(--gap-xsm);
 }
-.controls summary::before {
-    content: "▶";
+.controls summary .arrow{
+    width: var(--gap-sm);
+    height: var(--gap-sm);
+}
+.controls summary .arrow img{
+    height: 100%;
+    width: 100%;
 }
 details summary:hover{
     cursor: pointer;
 }
-.controls details[open] > summary::before {
+.controls details[open] > summary .arrow img{
     transform: rotate(90deg);
 }
 
