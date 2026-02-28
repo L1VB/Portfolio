@@ -175,8 +175,9 @@ section.filter-list .list .container .filterDiv .content .thumbnail.portrait img
 }
 
 button{
-    padding: 0;
-    border: 0;
+    padding: var(--gap-xsm) var(--gap-xsm-2);
+    border: 1px solid var(--hover-C);
+    border-radius: var(--gap-sm);
     background: none;
     color: var(--hover-C);
 }
