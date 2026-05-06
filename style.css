@@ -143,6 +143,28 @@ section.banner .content{
     justify-content: space-between;
 }
 
+/* download CV */
+.CV-button{
+    width: calc(100dvw - var(--gap-sm));
+    height: 100dvh;
+    position: absolute;
+    right: var(--gap-sm);
+    bottom: var(--gap-sm);
+    z-index: 100;
+    background-color: #215C28;
+}
+.CV-button button{
+    width: var(--gap-lr);
+    height: auto;
+    display: flex;
+    justify-content:right;
+    align-self: end;
+}
+.CV-button button img{
+    max-width: var(--gap-sm);
+    height: auto;
+}
+
 /* footer */
 footer{
     display: grid;
