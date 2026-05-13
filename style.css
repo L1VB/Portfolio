@@ -91,10 +91,27 @@ section{
     row-gap: var(--gap-sm);
 }
 
+/* navigation */
+.hero-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--gap-sm) var(--gap-sm) var(--gap-md);
+}
+.hero-nav .small{
+    max-width: 35%;
+}
+.hero-nav .nav-sm-content{
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap-xsm);
+    max-width: 60%;
+}
+
 /* hero */
 section.hero{
     width: 100dvw;
-    height: calc(100dvh - 32px);
+    height: calc(100dvh - 120px);
+    min-height: calc(100dvh - 100px);
     /* background-color: var(--light-BG); */
 }
 section.hero header{
@@ -153,6 +170,7 @@ section.banner .content{
     bottom: var(--gap-sm);
     z-index: 100;
     border-radius: none !important;
+    z-index: 100;
 }
 .CV-button:hover{}
 .CV-button .download-CV{

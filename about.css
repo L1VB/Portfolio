@@ -3,10 +3,10 @@
 }
 
 /* hero */
-section.hero{
+/* section.hero{
     width: 100dvw;
-    max-height: calc(100dvh - 32px);
-}
+    min-height: calc(100dvh - 100px);
+} */
 
 section.hero .profile img{
     width: 100%;

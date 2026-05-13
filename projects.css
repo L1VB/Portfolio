@@ -1,8 +1,6 @@
 /* hero */
-section.hero{
-    width: 100dvw;
-    height: var(--gap-lr);
-    /* background-color: var(--light-BG); */
+section{
+    display: flex;
 }
 
 
@@ -112,6 +110,9 @@ section.filter-list .text{
     align-self: flex-end;
     width: 100%;
     max-width: calc(100% - 10em - var(--gap-sm));
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xsm);
 }
 section.filter-list .text .des{
     display: flex;
@@ -174,7 +175,7 @@ section.filter-list .list .container .filterDiv .content .thumbnail.portrait img
     display: block;
 }
 
-button{
+.filter-list button{
     padding: var(--gap-xsm) var(--gap-xsm-2);
     border: 1px solid var(--hover-C);
     border-radius: var(--gap-sm);
@@ -182,7 +183,7 @@ button{
     color: var(--hover-C);
 }
 
-button:hover,
+.filter-list button:hover,
 section.filter-list .list .container details .list-details a:hover{
     cursor: pointer;
 }
