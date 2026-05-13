@@ -54,12 +54,13 @@ span{
 
 /* layout */
 :root{
-    --light-BG: rgb(138, 138, 138);
-    --bold-C: rgb(6, 80, 208);
-    --hover-C: rgb(208, 114, 6);
+    --light-BG: #8a8a8a;
+    --bold-C: #0650d0;
+    --hover-C: #d07206;
     --bold-BG: #215C28;
     --white: #eaeaea;
-    --black: rgb(45, 45, 45);
+    --black: #2d2d2d;
+    --clear: #ffffff00;
 
     --gap-xsm: 4px;
     --gap-xsm-2: 8px;
@@ -153,10 +154,13 @@ section.banner .content{
     z-index: 100;
     border-radius: none !important;
 }
+.CV-button:hover{}
 .CV-button .download-CV{
     float: right;
     height: 100%;
     display: flex;
+    background-color: var(--clear);
+    border: var(--clear);
 }
 .CV-button .download-CV .content-cv-button{
     display: flex;
@@ -166,7 +170,7 @@ section.banner .content{
     justify-content: flex-end;
 }
 .CV-button button .frame{
-    max-width: var(--gap-lr);
+    max-width: var(--gap-md);
     height: fit-content;
 }
 
