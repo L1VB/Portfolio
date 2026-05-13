@@ -273,7 +273,12 @@ section.hero .nav-sm-content{
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    .CV-button button .frame{
+        max-width: var(--gap-lr);
+        height: fit-content;
+    }
+}
 
 
 /* Large devices (laptops/desktops, 992px and up) */
