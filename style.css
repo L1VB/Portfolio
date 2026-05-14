@@ -183,7 +183,12 @@ section.banner .content{
     border-radius: none !important;
     z-index: 100;
 }
-.CV-button:hover{}
+.hide{
+    display: none;
+}
+.download-CV:hover .hide{
+    display: block;
+}
 .CV-button .download-CV{
     float: right;
     height: 100%;
