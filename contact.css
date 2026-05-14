@@ -1,7 +1,6 @@
 /* hero */
 section.hero{
     width: 100dvw;
-    /* min-height: calc(100dvh - 32px); */
     height: fit-content;
     /* background-color: var(--light-BG); */
 }
