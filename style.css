@@ -1,6 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+@font-face {
+    font-family: 'Sling';
+    src: url('https://static.wfonts.com/data/2014/08/15/sling/Sling.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sling';
+    src: url('https://static.wfonts.com/data/2014/08/15/sling/Sling Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-display: swap;
+}
+body {
+    font-family: 'Sling', sans-serif;
+}
+
+strong, b {
+    font-weight: bold; /* Uses the bold variant automatically */
+}
 
 /* typeface */
+h1, h2, h3{
+    font-family: 'Sling';
+    font-kerning: none;
+    letter-spacing: .01em;
+    font-weight: bold;
+}
+h4{
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
 .title-hero{
     font-weight: 700;
     font-size: 2rem;
@@ -35,11 +66,21 @@
 }
 
 a{
-    color: var(--bold-C);
+    color: var(--black);
+    text-decoration: none !important;
 }
-a:hover{
-    color: var(--hover-C);
+a:hover {
+    color: var(--bold-BG);
 }
+
+/* mark{
+    background: none;
+}
+mark:hover{
+    background-color: var(--bold-BG);
+    color: var(--white);
+    margin: -.75em 0;
+} */
 
 .external-link{
     color: var(--bold-C);
@@ -49,7 +90,7 @@ a:hover{
 span{
     color: var(--light-BG);
     cursor: default;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* layout */
@@ -100,19 +141,21 @@ section{
 
 /* navigation */
 .hero-nav{
-    display: flex;
-    justify-content: space-between;
+    position: fixed;
     padding: var(--gap-sm) var(--gap-sm) var(--gap-md);
+    background-color: var(--white);
 }
 .hero-nav .small{
-    max-width: 35%;
+    width: calc(100dvw - calc(var(--gap-sm) + var(--gap-sm)));
+    display: flex;
+    justify-content: space-between;
 }
-.hero-nav .nav-sm-content{
+/* .hero-nav .nav-sm-content{
     display: flex;
     justify-content: space-between;
     gap: var(--gap-xsm);
     max-width: 60%;
-}
+} */
 
 /* hero */
 section.hero{

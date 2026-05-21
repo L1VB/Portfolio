@@ -109,7 +109,6 @@ section.filter-list .list .container .filterDiv .content{
 section.filter-list .text{
     align-self: flex-end;
     width: 100%;
-    max-width: calc(100% - 10em - var(--gap-sm));
     display: flex;
     flex-direction: column;
     gap: var(--gap-xsm);
